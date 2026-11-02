@@ -143,6 +143,26 @@
       {
        "label": "Contact",
        "url": "/contact/"
+      },
+      {
+       "label": "FAQ",
+       "url": "/faq/"
+      },
+      {
+       "label": "Editorial policy",
+       "url": "/editorial-policy/"
+      },
+      {
+       "label": "How we test coupons",
+       "url": "/how-we-test-coupons/"
+      },
+      {
+       "label": "Saving tips",
+       "url": "/saving-tips/"
+      },
+      {
+       "label": "Coupon glossary",
+       "url": "/coupon-glossary/"
       }
      ]
     },
@@ -156,6 +176,10 @@
       {
        "label": "Terms",
        "url": "/terms/"
+      },
+      {
+       "label": "Affiliate disclosure",
+       "url": "/affiliate-disclosure/"
       }
      ]
     }
@@ -251,7 +275,7 @@
   },
   "seo": {
    "titleTemplate": "%title% | %site%",
-   "defaultDescription": "Promo codes and deals for shoppers in the US, UK, Canada and Europe, with check dates and clear terms.",
+   "defaultDescription": "Verified promo codes and deals for the US, UK, Canada and Europe, with last-checked dates, clear terms and money-saving guides.",
    "ogImage": "",
    "googleVerification": "",
    "bingVerification": "",
@@ -307,73 +331,127 @@
    "slug": "fashion",
    "name": "Fashion & Apparel",
    "icon": "👟",
-   "description": "Clothing, shoes and accessories from high-street names and online fashion retailers. Sales in this category move fast, so check expiry dates before you add to cart."
+   "description": "Clothing, shoes and accessories from high-street names and online fashion retailers. Sales move fast, so check expiry dates before checkout.",
+   "status": "published"
   },
   {
    "slug": "electronics",
    "name": "Electronics & Tech",
    "icon": "💻",
-   "description": "Phones, laptops, TVs and small gadgets. Big-ticket items often carry the biggest savings, but also the strictest code exclusions, so read the terms line on each offer."
-  },
-  {
-   "slug": "software",
-   "name": "Software & Online Services",
-   "icon": "🧩",
-   "description": "VPNs, web hosting, design tools and subscriptions. Most offers apply to the first term only, so note the renewal price before you commit."
-  },
-  {
-   "slug": "travel",
-   "name": "Travel & Hotels",
-   "icon": "✈️",
-   "description": "Flights, hotels, holiday rentals and trip planning platforms. Prices shift daily, so a code is best combined with flexible travel dates."
-  },
-  {
-   "slug": "food-delivery",
-   "name": "Food & Delivery",
-   "icon": "🍕",
-   "description": "Restaurant and grocery delivery apps. Many codes are for new customers, and delivery fees vary by area and time of day."
+   "description": "Phones, laptops, TVs and gadgets. Big-ticket items carry the biggest savings but the strictest exclusions, so read each offer terms.",
+   "status": "published"
   },
   {
    "slug": "health-beauty",
    "name": "Health & Beauty",
    "icon": "💄",
-   "description": "Skincare, make-up, wellness and pharmacy retailers. Loyalty programmes in this category frequently stack with promo codes."
+   "description": "Makeup, skincare, haircare and wellness. Beauty codes often stack with loyalty points, free gifts and member-only sales.",
+   "status": "published"
   },
   {
    "slug": "home-garden",
    "name": "Home & Garden",
-   "icon": "🛋️",
-   "description": "Furniture, DIY and garden supplies. Delivery charges on bulky items can outweigh a discount, so compare the full basket total."
+   "icon": "🏡",
+   "description": "Furniture, decor, DIY and garden essentials. Seasonal sales and clearance events bring the deepest discounts here.",
+   "status": "published"
+  },
+  {
+   "slug": "travel",
+   "name": "Travel & Hotels",
+   "icon": "✈️",
+   "description": "Flights, hotels, holiday rentals and car hire. Booking windows and member rates often beat the headline code.",
+   "status": "published"
+  },
+  {
+   "slug": "food-delivery",
+   "name": "Food Delivery",
+   "icon": "🍔",
+   "description": "Restaurant delivery and takeaway apps. First-order codes and free-delivery thresholds are where the real savings sit.",
+   "status": "published"
+  },
+  {
+   "slug": "groceries",
+   "name": "Groceries & Supermarkets",
+   "icon": "🛒",
+   "description": "Supermarket codes, delivery passes and cashback on weekly shops. Compare the final basket, not just the headline percentage.",
+   "status": "published"
+  },
+  {
+   "slug": "software",
+   "name": "Software & SaaS",
+   "icon": "🧩",
+   "description": "VPNs, hosting, design and productivity tools. Most discounts apply to the first term only, so note the renewal price.",
+   "status": "published"
   },
   {
    "slug": "sports-outdoors",
    "name": "Sports & Outdoors",
-   "icon": "🏕️",
-   "description": "Running, cycling, camping and team sports gear. Season-end clearances usually beat code-only offers."
+   "icon": "🏃",
+   "description": "Running, training and outdoor gear. Student and member programmes often beat public promo codes.",
+   "status": "published"
   },
   {
-   "slug": "education",
-   "name": "Education & Learning",
-   "icon": "🎓",
-   "description": "Online courses and learning platforms. Many sell the same course at several prices through the year, so wait for a sale banner before paying full price."
+   "slug": "gaming",
+   "name": "Gaming & Consoles",
+   "icon": "🎮",
+   "description": "Games, consoles, subscriptions and in-game credit. Digital store sales rotate weekly, so wishlist before you buy.",
+   "status": "published"
+  },
+  {
+   "slug": "baby-kids",
+   "name": "Baby & Kids",
+   "icon": "🍼",
+   "description": "Nursery, pushchairs, kids clothing and toys. Bundle offers and new-customer codes add up for growing families.",
+   "status": "published"
+  },
+  {
+   "slug": "furniture",
+   "name": "Furniture & Decor",
+   "icon": "🛋️",
+   "description": "Sofas, beds, storage and home decor. Lead times and clearance timing matter as much as the discount.",
+   "status": "published"
   },
   {
    "slug": "pets",
    "name": "Pets",
    "icon": "🐾",
-   "description": "Food, treats and supplies for dogs, cats and small animals. Repeat-delivery plans often include their own discount on top of any code."
+   "description": "Pet food, supplies and pharmacy items. Subscribe-and-save usually beats a one-off coupon on repeat buys.",
+   "status": "published"
   },
   {
    "slug": "automotive",
    "name": "Automotive",
    "icon": "🚗",
-   "description": "Car parts, accessories and servicing. Check part compatibility with your vehicle before using a discount."
+   "description": "Car parts, servicing, tyres and accessories. Seasonal fitting offers and rebate cards are common here.",
+   "status": "published"
+  },
+  {
+   "slug": "diy-tools",
+   "name": "DIY & Tools",
+   "icon": "🔨",
+   "description": "Tools, hardware, paint and building supplies. Trade accounts and bulk pricing often beat public codes.",
+   "status": "published"
+  },
+  {
+   "slug": "jewelry-watches",
+   "name": "Jewellery & Watches",
+   "icon": "💎",
+   "description": "Rings, necklaces, watches and gifts. Engraving and gift-wrap offers can be as valuable as the discount.",
+   "status": "published"
   },
   {
    "slug": "entertainment",
-   "name": "Entertainment & Events",
+   "name": "Tickets & Entertainment",
    "icon": "🎟️",
-   "description": "Tickets, streaming and leisure. Fees are added late in checkout for many ticket sellers, so look at the final total."
+   "description": "Concerts, theatre, cinema and events. Presales and member windows matter more than coupon codes.",
+   "status": "published"
+  },
+  {
+   "slug": "education",
+   "name": "Courses & Learning",
+   "icon": "🎓",
+   "description": "Online courses, e-learning and skills platforms. Frequent sitewide sales make timing your purchase worthwhile.",
+   "status": "published"
   }
  ],
  "stores": [
@@ -390,10 +468,10 @@
    ],
    "featured": true,
    "status": "published",
-   "description": "Nike sells running, training and lifestyle footwear and clothing, with ranges for adults and children. Its free membership programme gives early access to some launches.",
+   "description": "Running, training and lifestyle footwear plus sportswear for adults and kids, with app-only member offers.",
    "tips": [
-    "Sale items are often excluded from percentage codes, so compare the sale price first.",
-    "Members sometimes see extra offers in the app that are not shown to visitors."
+    "Read the terms on every Nike offer for exclusions, minimum spend and regional limits.",
+    "Join Nike’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -402,16 +480,17 @@
    "domain": "asos.com",
    "category": "fashion",
    "markets": [
+    "US",
     "UK",
-    "EU",
-    "US"
+    "CA",
+    "EU"
    ],
    "featured": true,
    "status": "published",
-   "description": "ASOS is an online fashion retailer stocking its own labels alongside hundreds of other brands. It serves customers in the UK, Europe and the US with local sites.",
+   "description": "Online fashion and beauty for 20-somethings, with frequent sitewide student and flash sale codes.",
    "tips": [
-    "Student and new-customer offers are usually the largest, so check whether you qualify.",
-    "Returns windows differ by country, so confirm yours before buying."
+    "Read the terms on every ASOS offer for exclusions, minimum spend and regional limits.",
+    "Join ASOS’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -420,15 +499,55 @@
    "domain": "zalando.com",
    "category": "fashion",
    "markets": [
-    "EU",
-    "UK"
+    "US",
+    "UK",
+    "CA",
+    "EU"
    ],
    "featured": false,
    "status": "published",
-   "description": "Zalando is a European online fashion platform covering clothing, shoes and beauty. It runs country-specific shops, each with its own sales calendar.",
+   "description": "European fashion marketplace stocking thousands of brands for men, women and children.",
    "tips": [
-    "Offers differ per country shop, so use the shop that matches your delivery address.",
-    "Newsletter sign-ups sometimes unlock a first-order discount."
+    "Read the terms on every Zalando offer for exclusions, minimum spend and regional limits.",
+    "Join Zalando’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "hm",
+   "name": "H&M",
+   "domain": "hm.com",
+   "category": "fashion",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Affordable high-street fashion, basics and a member loyalty scheme with welcome vouchers.",
+   "tips": [
+    "Read the terms on every H&M offer for exclusions, minimum spend and regional limits.",
+    "Join H&M’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "uniqlo",
+   "name": "Uniqlo",
+   "domain": "uniqlo.com",
+   "category": "fashion",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Japanese casualwear known for technical fabrics and seasonal limited-time offers.",
+   "tips": [
+    "Read the terms on every Uniqlo offer for exclusions, minimum spend and regional limits.",
+    "Join Uniqlo’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -438,14 +557,16 @@
    "category": "electronics",
    "markets": [
     "US",
-    "CA"
+    "UK",
+    "CA",
+    "EU"
    ],
    "featured": true,
    "status": "published",
-   "description": "Best Buy is a North American consumer electronics retailer selling laptops, TVs, appliances and gaming gear online and in stores.",
+   "description": "US electronics retailer for laptops, TVs, phones and appliances, with frequent flash deals.",
    "tips": [
-    "Open-box and clearance listings can be cheaper than any code on new stock.",
-    "Check price-match and return terms for high-value items."
+    "Read the terms on every Best Buy offer for exclusions, minimum spend and regional limits.",
+    "Join Best Buy’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -458,10 +579,10 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "Currys is a UK electronics and appliance retailer offering delivery, installation and recycling services for large items.",
+   "description": "UK tech retailer for computing, TV and appliances, with trade-in and price-match options.",
    "tips": [
-    "Student and trade-in schemes can beat general codes on laptops.",
-    "Bundled deals on appliances often include free installation."
+    "Read the terms on every Currys offer for exclusions, minimum spend and regional limits.",
+    "Join Currys’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -477,17 +598,52 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "Samsung's online store sells phones, tablets, TVs and home appliances direct, with trade-in credits on selected devices.",
+   "description": "Phones, TVs, monitors and home appliances direct from the manufacturer, with trade-in bonuses.",
    "tips": [
-    "Trade-in credit usually stacks with seasonal promotions.",
-    "Education and employee programmes may offer extra discounts."
+    "Read the terms on every Samsung offer for exclusions, minimum spend and regional limits.",
+    "Join Samsung’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
-   "slug": "nordvpn",
-   "name": "NordVPN",
-   "domain": "nordvpn.com",
-   "category": "software",
+   "slug": "apple",
+   "name": "Apple",
+   "domain": "apple.com",
+   "category": "electronics",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "iPhone, Mac, iPad and accessories, with education pricing and gift-card promotions at key events.",
+   "tips": [
+    "Read the terms on every Apple offer for exclusions, minimum spend and regional limits.",
+    "Join Apple’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "argos",
+   "name": "Argos",
+   "domain": "argos.co.uk",
+   "category": "electronics",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK catalogue retailer for tech, home and toys with fast Click and Collect.",
+   "tips": [
+    "Read the terms on every Argos offer for exclusions, minimum spend and regional limits.",
+    "Join Argos’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "sephora",
+   "name": "Sephora",
+   "domain": "sephora.com",
+   "category": "health-beauty",
    "markets": [
     "US",
     "UK",
@@ -496,17 +652,33 @@
    ],
    "featured": true,
    "status": "published",
-   "description": "NordVPN is a subscription VPN service with apps for phones, computers and routers. Plans are priced by term length, with longer terms costing less per month.",
+   "description": "Beauty retailer for makeup, skincare and fragrance, with a Beauty Insider loyalty tier system.",
    "tips": [
-    "Introductory pricing applies to the first term, so check the renewal price.",
-    "Refund periods apply to new subscriptions; read the conditions before you buy."
+    "Read the terms on every Sephora offer for exclusions, minimum spend and regional limits.",
+    "Join Sephora’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
-   "slug": "canva",
-   "name": "Canva",
-   "domain": "canva.com",
-   "category": "software",
+   "slug": "boots",
+   "name": "Boots",
+   "domain": "boots.com",
+   "category": "health-beauty",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK health and beauty pharmacy with Advantage Card points and regular multibuy offers.",
+   "tips": [
+    "Read the terms on every Boots offer for exclusions, minimum spend and regional limits.",
+    "Join Boots’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "ulta",
+   "name": "Ulta Beauty",
+   "domain": "ulta.com",
+   "category": "health-beauty",
    "markets": [
     "US",
     "UK",
@@ -515,17 +687,17 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "Canva is an online design tool for presentations, social posts and print layouts, with a free tier and paid Pro plans.",
+   "description": "US beauty superstore mixing mass and prestige brands with a generous Ultamate rewards scheme.",
    "tips": [
-    "Paid plans usually offer a free trial before billing starts.",
-    "Nonprofits and educators can apply for free access to paid features."
+    "Read the terms on every Ulta Beauty offer for exclusions, minimum spend and regional limits.",
+    "Join Ulta Beauty’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
-   "slug": "hostinger",
-   "name": "Hostinger",
-   "domain": "hostinger.com",
-   "category": "software",
+   "slug": "lookfantastic",
+   "name": "Lookfantastic",
+   "domain": "lookfantastic.com",
+   "category": "health-beauty",
    "markets": [
     "US",
     "UK",
@@ -534,10 +706,102 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "Hostinger provides web hosting, domains and website builder plans aimed at small sites and online shops.",
+   "description": "Online beauty retailer with frequent discount codes on haircare, skincare and tools.",
    "tips": [
-    "Hosting is priced per term, so the longest term gives the lowest monthly figure.",
-    "Renewal prices can differ from the first-term price."
+    "Read the terms on every Lookfantastic offer for exclusions, minimum spend and regional limits.",
+    "Join Lookfantastic’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "cult-beauty",
+   "name": "Cult Beauty",
+   "domain": "cultbeauty.co.uk",
+   "category": "health-beauty",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Curated premium beauty and skincare with editorial bundles and newsletter-only codes.",
+   "tips": [
+    "Read the terms on every Cult Beauty offer for exclusions, minimum spend and regional limits.",
+    "Join Cult Beauty’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "ikea",
+   "name": "IKEA",
+   "domain": "ikea.com",
+   "category": "home-garden",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "Flat-pack furniture and home accessories, with an IKEA Family loyalty club and seasonal sales.",
+   "tips": [
+    "Read the terms on every IKEA offer for exclusions, minimum spend and regional limits.",
+    "Join IKEA’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "home-depot",
+   "name": "The Home Depot",
+   "domain": "homedepot.com",
+   "category": "home-garden",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US home-improvement giant for tools, building materials and garden, with frequent online specials.",
+   "tips": [
+    "Read the terms on every The Home Depot offer for exclusions, minimum spend and regional limits.",
+    "Join The Home Depot’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "wayfair",
+   "name": "Wayfair",
+   "domain": "wayfair.com",
+   "category": "home-garden",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Online home goods marketplace with rotating category sales and clearance events.",
+   "tips": [
+    "Read the terms on every Wayfair offer for exclusions, minimum spend and regional limits.",
+    "Join Wayfair’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "lowes",
+   "name": "Lowes",
+   "domain": "lowes.com",
+   "category": "home-garden",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US hardware and garden retailer with a Pro loyalty programme and seasonal promotions.",
+   "tips": [
+    "Read the terms on every Lowes offer for exclusions, minimum spend and regional limits.",
+    "Join Lowes’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -553,10 +817,10 @@
    ],
    "featured": true,
    "status": "published",
-   "description": "Expedia is a travel booking platform for flights, hotels, car hire and packages, with a rewards scheme on eligible bookings.",
+   "description": "Flights, hotels and car hire in one place, with member prices and app-only deals.",
    "tips": [
-    "Package bookings can cost less than booking flight and hotel separately.",
-    "Check cancellation terms before choosing the cheapest rate."
+    "Read the terms on every Expedia offer for exclusions, minimum spend and regional limits.",
+    "Join Expedia’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -572,10 +836,10 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "Booking.com lists hotels, apartments and other stays worldwide, with many rooms offering free cancellation.",
+   "description": "Hotel and accommodation booking with Genius discounts that grow with your booking count.",
    "tips": [
-    "Loyalty tiers can unlock member-only prices on selected stays.",
-    "Filter by free cancellation to keep your plans flexible."
+    "Read the terms on every Booking.com offer for exclusions, minimum spend and regional limits.",
+    "Join Booking.com’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -591,10 +855,29 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "Airbnb connects guests with hosts offering homes and unique stays, with cleaning and service fees shown before you pay.",
+   "description": "Holiday homes and experiences worldwide, with occasional first-booking and seasonal credits.",
    "tips": [
-    "Weekly and monthly stays often include host discounts.",
-    "Compare the total price, not just the nightly rate."
+    "Read the terms on every Airbnb offer for exclusions, minimum spend and regional limits.",
+    "Join Airbnb’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "kayak",
+   "name": "KAYAK",
+   "domain": "kayak.com",
+   "category": "travel",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Flight and hotel price comparison that surfaces the cheapest fare across providers.",
+   "tips": [
+    "Read the terms on every KAYAK offer for exclusions, minimum spend and regional limits.",
+    "Join KAYAK’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -610,10 +893,10 @@
    ],
    "featured": true,
    "status": "published",
-   "description": "Uber Eats delivers restaurant and grocery orders in many cities, with a subscription option for reduced delivery fees.",
+   "description": "Restaurant delivery app with new-customer credits and periodic free-delivery offers.",
    "tips": [
-    "Promotions are often limited to new accounts or specific restaurants.",
-    "Compare delivery fees at different times of day."
+    "Read the terms on every Uber Eats offer for exclusions, minimum spend and regional limits.",
+    "Join Uber Eats’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -623,14 +906,16 @@
    "category": "food-delivery",
    "markets": [
     "US",
-    "CA"
+    "UK",
+    "CA",
+    "EU"
    ],
    "featured": false,
    "status": "published",
-   "description": "DoorDash offers restaurant, grocery and convenience delivery across the US and Canada, with a paid membership for lower fees.",
+   "description": "US food-delivery service with DashPass free-delivery membership and first-order promos.",
    "tips": [
-    "Offers can depend on the restaurant and a minimum basket size.",
-    "Pickup orders skip delivery fees entirely."
+    "Read the terms on every DoorDash offer for exclusions, minimum spend and regional limits.",
+    "Join DoorDash’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -639,56 +924,37 @@
    "domain": "just-eat.co.uk",
    "category": "food-delivery",
    "markets": [
-    "UK",
-    "EU"
+    "UK"
    ],
    "featured": false,
    "status": "published",
-   "description": "Just Eat is a takeaway ordering platform with local restaurants across the UK and parts of Europe.",
+   "description": "UK takeaway marketplace with frequent money-off codes and free-delivery trials.",
    "tips": [
-    "Restaurant-specific offers appear on the menu page.",
-    "Collection orders avoid delivery charges."
+    "Read the terms on every Just Eat offer for exclusions, minimum spend and regional limits.",
+    "Join Just Eat’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
-   "slug": "sephora",
-   "name": "Sephora",
-   "domain": "sephora.com",
-   "category": "health-beauty",
-   "markets": [
-    "US",
-    "CA",
-    "EU"
-   ],
-   "featured": true,
-   "status": "published",
-   "description": "Sephora is a beauty retailer carrying make-up, skincare, haircare and fragrance, with a points-based loyalty programme.",
-   "tips": [
-    "Loyalty members often get seasonal sale access before the public.",
-    "Free samples can be added to many orders."
-   ]
-  },
-  {
-   "slug": "boots",
-   "name": "Boots",
-   "domain": "boots.com",
-   "category": "health-beauty",
+   "slug": "deliveroo",
+   "name": "Deliveroo",
+   "domain": "deliveroo.co.uk",
+   "category": "food-delivery",
    "markets": [
     "UK"
    ],
    "featured": false,
    "status": "published",
-   "description": "Boots is a UK pharmacy and beauty retailer selling health products, toiletries and cosmetics online and in stores.",
+   "description": "UK and Europe delivery platform with Plus membership and regular money-off codes.",
    "tips": [
-    "Loyalty card points can be spent on later purchases.",
-    "Multi-buy promotions change weekly."
+    "Read the terms on every Deliveroo offer for exclusions, minimum spend and regional limits.",
+    "Join Deliveroo’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
-   "slug": "ikea",
-   "name": "IKEA",
-   "domain": "ikea.com",
-   "category": "home-garden",
+   "slug": "grubhub",
+   "name": "Grubhub",
+   "domain": "grubhub.com",
+   "category": "food-delivery",
    "markets": [
     "US",
     "UK",
@@ -697,27 +963,175 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "IKEA sells flat-pack furniture, storage and home accessories, with a family membership giving access to member prices.",
+   "description": "US delivery network with Grubhub+ membership and rotating restaurant offers.",
    "tips": [
-    "Family members get lower prices on selected items.",
-    "Delivery fees depend on item size and distance."
+    "Read the terms on every Grubhub offer for exclusions, minimum spend and regional limits.",
+    "Join Grubhub’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
-   "slug": "home-depot",
-   "name": "The Home Depot",
-   "domain": "homedepot.com",
-   "category": "home-garden",
+   "slug": "tesco",
+   "name": "Tesco",
+   "domain": "tesco.com",
+   "category": "groceries",
    "markets": [
-    "US",
-    "CA"
+    "UK"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "UK supermarket with Clubcard prices, delivery passes and regular household offers.",
+   "tips": [
+    "Read the terms on every Tesco offer for exclusions, minimum spend and regional limits.",
+    "Join Tesco’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "asda",
+   "name": "Asda",
+   "domain": "asda.com",
+   "category": "groceries",
+   "markets": [
+    "UK"
    ],
    "featured": false,
    "status": "published",
-   "description": "The Home Depot supplies tools, building materials, appliances and garden products for DIY projects and trades.",
+   "description": "UK supermarket with Rollback prices and an Asda Rewards cashpot scheme.",
    "tips": [
-    "Pro accounts can unlock volume pricing.",
-    "Buy online, pick up in store can avoid shipping costs on bulky items."
+    "Read the terms on every Asda offer for exclusions, minimum spend and regional limits.",
+    "Join Asda’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "instacart",
+   "name": "Instacart",
+   "domain": "instacart.com",
+   "category": "groceries",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US grocery delivery from local stores, with Instacart+ free-delivery membership.",
+   "tips": [
+    "Read the terms on every Instacart offer for exclusions, minimum spend and regional limits.",
+    "Join Instacart’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "walmart",
+   "name": "Walmart",
+   "domain": "walmart.com",
+   "category": "groceries",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US superstore for groceries, tech and household goods, with Walmart+ member perks.",
+   "tips": [
+    "Read the terms on every Walmart offer for exclusions, minimum spend and regional limits.",
+    "Join Walmart’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "nordvpn",
+   "name": "NordVPN",
+   "domain": "nordvpn.com",
+   "category": "software",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "Virtual private network with long-plan discounts and a money-back guarantee period.",
+   "tips": [
+    "Read the terms on every NordVPN offer for exclusions, minimum spend and regional limits.",
+    "Join NordVPN’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "canva",
+   "name": "Canva",
+   "domain": "canva.com",
+   "category": "software",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Online design tool whose Pro plans are frequently discounted for annual billing.",
+   "tips": [
+    "Read the terms on every Canva offer for exclusions, minimum spend and regional limits.",
+    "Join Canva’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "hostinger",
+   "name": "Hostinger",
+   "domain": "hostinger.com",
+   "category": "software",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Web hosting provider with deep first-term discounts and a free domain option.",
+   "tips": [
+    "Read the terms on every Hostinger offer for exclusions, minimum spend and regional limits.",
+    "Join Hostinger’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "adobe",
+   "name": "Adobe",
+   "domain": "adobe.com",
+   "category": "software",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Creative software suite with student pricing and periodic bundle offers.",
+   "tips": [
+    "Read the terms on every Adobe offer for exclusions, minimum spend and regional limits.",
+    "Join Adobe’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "microsoft-365",
+   "name": "Microsoft 365",
+   "domain": "microsoft.com",
+   "category": "software",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Office apps and cloud storage with family plans and frequent retailer promotions.",
+   "tips": [
+    "Read the terms on every Microsoft 365 offer for exclusions, minimum spend and regional limits.",
+    "Join Microsoft 365’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -726,38 +1140,24 @@
    "domain": "rei.com",
    "category": "sports-outdoors",
    "markets": [
-    "US"
+    "US",
+    "UK",
+    "CA",
+    "EU"
    ],
-   "featured": false,
+   "featured": true,
    "status": "published",
-   "description": "REI is a US outdoor gear retailer and co-op, selling camping, climbing, cycling and paddling equipment.",
+   "description": "US outdoor co-op for gear and apparel, with member dividends and seasonal sales.",
    "tips": [
-    "Members earn a yearly reward on eligible purchases.",
-    "The used-gear section can cut costs on big items like tents."
+    "Read the terms on every REI offer for exclusions, minimum spend and regional limits.",
+    "Join REI’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
    "slug": "decathlon",
    "name": "Decathlon",
-   "domain": "decathlon.co.uk",
+   "domain": "decathlon.com",
    "category": "sports-outdoors",
-   "markets": [
-    "UK",
-    "EU"
-   ],
-   "featured": false,
-   "status": "published",
-   "description": "Decathlon is a sports retailer selling affordable gear for dozens of sports under its own brands.",
-   "tips": [
-    "Own-brand items are priced to compete with big-name labels.",
-    "Check the clearance section before looking for codes."
-   ]
-  },
-  {
-   "slug": "udemy",
-   "name": "Udemy",
-   "domain": "udemy.com",
-   "category": "education",
    "markets": [
     "US",
     "UK",
@@ -766,10 +1166,280 @@
    ],
    "featured": false,
    "status": "published",
-   "description": "Udemy is an online learning marketplace with video courses across tech, business, design and personal development.",
+   "description": "Value sports retailer covering 70+ sports, with occasional member-only reductions.",
    "tips": [
-    "List prices are often far above the sale price shown during promotions.",
-    "Check a course's reviews and update date before buying."
+    "Read the terms on every Decathlon offer for exclusions, minimum spend and regional limits.",
+    "Join Decathlon’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "adidas",
+   "name": "Adidas",
+   "domain": "adidas.com",
+   "category": "sports-outdoors",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Sportswear and footwear with an adiClub loyalty scheme and end-of-season sales.",
+   "tips": [
+    "Read the terms on every Adidas offer for exclusions, minimum spend and regional limits.",
+    "Join Adidas’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "gymshark",
+   "name": "Gymshark",
+   "domain": "gymshark.com",
+   "category": "sports-outdoors",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Gym and athleisure apparel with student discounts and early-access drops.",
+   "tips": [
+    "Read the terms on every Gymshark offer for exclusions, minimum spend and regional limits.",
+    "Join Gymshark’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "steam",
+   "name": "Steam",
+   "domain": "steampowered.com",
+   "category": "gaming",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "PC game storefront with rotating seasonal sales and a wishlist price-alert system.",
+   "tips": [
+    "Read the terms on every Steam offer for exclusions, minimum spend and regional limits.",
+    "Join Steam’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "playstation",
+   "name": "PlayStation",
+   "domain": "playstation.com",
+   "category": "gaming",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Consoles, games and PS Plus subscriptions, with regular store sales.",
+   "tips": [
+    "Read the terms on every PlayStation offer for exclusions, minimum spend and regional limits.",
+    "Join PlayStation’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "xbox",
+   "name": "Xbox",
+   "domain": "xbox.com",
+   "category": "gaming",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Console and PC gaming with Game Pass and frequent digital game deals.",
+   "tips": [
+    "Read the terms on every Xbox offer for exclusions, minimum spend and regional limits.",
+    "Join Xbox’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "nintendo",
+   "name": "Nintendo",
+   "domain": "nintendo.com",
+   "category": "gaming",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Switch consoles, games and eShop credit, with periodic publisher sales.",
+   "tips": [
+    "Read the terms on every Nintendo offer for exclusions, minimum spend and regional limits.",
+    "Join Nintendo’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "epic-games",
+   "name": "Epic Games",
+   "domain": "epicgames.com",
+   "category": "gaming",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Game store with weekly free titles and seasonal mega sales.",
+   "tips": [
+    "Read the terms on every Epic Games offer for exclusions, minimum spend and regional limits.",
+    "Join Epic Games’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "mothercare",
+   "name": "Mothercare",
+   "domain": "mothercare.com",
+   "category": "baby-kids",
+   "markets": [
+    "UK"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "UK nursery, pushchair and baby-clothing specialist with regular multibuy offers.",
+   "tips": [
+    "Read the terms on every Mothercare offer for exclusions, minimum spend and regional limits.",
+    "Join Mothercare’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "carters",
+   "name": "Carters",
+   "domain": "carters.com",
+   "category": "baby-kids",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US baby and kids clothing with frequent storewide percentage-off events.",
+   "tips": [
+    "Read the terms on every Carters offer for exclusions, minimum spend and regional limits.",
+    "Join Carters’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "the-entertainer",
+   "name": "The Entertainer",
+   "domain": "theentertainer.com",
+   "category": "baby-kids",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK toy retailer with regular promotions and price-match on top brands.",
+   "tips": [
+    "Read the terms on every The Entertainer offer for exclusions, minimum spend and regional limits.",
+    "Join The Entertainer’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "john-lewis",
+   "name": "John Lewis",
+   "domain": "johnlewis.com",
+   "category": "baby-kids",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK department store for nursery and kids, with a Never Knowingly Undersold price promise.",
+   "tips": [
+    "Read the terms on every John Lewis offer for exclusions, minimum spend and regional limits.",
+    "Join John Lewis’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "west-elm",
+   "name": "West Elm",
+   "domain": "westelm.com",
+   "category": "furniture",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "Modern furniture and decor with frequent clearance and member discounts.",
+   "tips": [
+    "Read the terms on every West Elm offer for exclusions, minimum spend and regional limits.",
+    "Join West Elm’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "made-com",
+   "name": "Made.com",
+   "domain": "made.com",
+   "category": "furniture",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Design-led furniture sold direct online with seasonal markdowns.",
+   "tips": [
+    "Read the terms on every Made.com offer for exclusions, minimum spend and regional limits.",
+    "Join Made.com’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "dfs",
+   "name": "DFS",
+   "domain": "dfs.co.uk",
+   "category": "furniture",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK sofa specialist with perpetual promotions and interest-free credit options.",
+   "tips": [
+    "Read the terms on every DFS offer for exclusions, minimum spend and regional limits.",
+    "Join DFS’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "article",
+   "name": "Article",
+   "domain": "article.com",
+   "category": "furniture",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Direct-to-consumer modern furniture with occasional email-signup discounts.",
+   "tips": [
+    "Read the terms on every Article offer for exclusions, minimum spend and regional limits.",
+    "Join Article’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -778,14 +1448,71 @@
    "domain": "chewy.com",
    "category": "pets",
    "markets": [
-    "US"
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "US pet food and supplies with Autoship savings and a first-order discount.",
+   "tips": [
+    "Read the terms on every Chewy offer for exclusions, minimum spend and regional limits.",
+    "Join Chewy’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "pets-at-home",
+   "name": "Pets at Home",
+   "domain": "petsathome.com",
+   "category": "pets",
+   "markets": [
+    "UK"
    ],
    "featured": false,
    "status": "published",
-   "description": "Chewy is an online pet retailer selling food, treats, toys and pharmacy items, with a repeat-delivery option.",
+   "description": "UK pet supplies with a loyalty scheme and regular food offers.",
    "tips": [
-    "Autoship orders typically carry a first-order discount.",
-    "Compare unit prices across bag sizes."
+    "Read the terms on every Pets at Home offer for exclusions, minimum spend and regional limits.",
+    "Join Pets at Home’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "zooplus",
+   "name": "Zooplus",
+   "domain": "zooplus.com",
+   "category": "pets",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "European online pet shop with bulk-buy pricing and newsletter codes.",
+   "tips": [
+    "Read the terms on every Zooplus offer for exclusions, minimum spend and regional limits.",
+    "Join Zooplus’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "petco",
+   "name": "Petco",
+   "domain": "petco.com",
+   "category": "pets",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US pet retailer with a Vital Care membership and repeat-delivery savings.",
+   "tips": [
+    "Read the terms on every Petco offer for exclusions, minimum spend and regional limits.",
+    "Join Petco’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -796,12 +1523,200 @@
    "markets": [
     "UK"
    ],
+   "featured": true,
+   "status": "published",
+   "description": "UK motoring and cycling retailer with fitting offers and a Motoring Club scheme.",
+   "tips": [
+    "Read the terms on every Halfords offer for exclusions, minimum spend and regional limits.",
+    "Join Halfords’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "euro-car-parts",
+   "name": "Euro Car Parts",
+   "domain": "eurocarparts.com",
+   "category": "automotive",
+   "markets": [
+    "UK"
+   ],
    "featured": false,
    "status": "published",
-   "description": "Halfords supplies car parts, bike accessories and in-store fitting services across the UK.",
+   "description": "UK car parts with frequent discount codes on brakes, batteries and servicing.",
    "tips": [
-    "Fitting services are bookable online and sometimes bundled with parts.",
-    "Motoring club members see exclusive prices."
+    "Read the terms on every Euro Car Parts offer for exclusions, minimum spend and regional limits.",
+    "Join Euro Car Parts’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "kwik-fit",
+   "name": "Kwik Fit",
+   "domain": "kwik-fit.com",
+   "category": "automotive",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK tyre, MOT and servicing chain with online booking discounts.",
+   "tips": [
+    "Read the terms on every Kwik Fit offer for exclusions, minimum spend and regional limits.",
+    "Join Kwik Fit’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "autozone",
+   "name": "AutoZone",
+   "domain": "autozone.com",
+   "category": "automotive",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US auto parts retailer with an AutoZone Rewards programme and online deals.",
+   "tips": [
+    "Read the terms on every AutoZone offer for exclusions, minimum spend and regional limits.",
+    "Join AutoZone’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "screwfix",
+   "name": "Screwfix",
+   "domain": "screwfix.com",
+   "category": "diy-tools",
+   "markets": [
+    "UK"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "UK trade and DIY supplies with bulk pricing and Click and Collect.",
+   "tips": [
+    "Read the terms on every Screwfix offer for exclusions, minimum spend and regional limits.",
+    "Join Screwfix’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "bq",
+   "name": "B&Q",
+   "domain": "diy.com",
+   "category": "diy-tools",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK home-improvement store for paint, garden and tools.",
+   "tips": [
+    "Read the terms on every B&Q offer for exclusions, minimum spend and regional limits.",
+    "Join B&Q’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "toolstation",
+   "name": "Toolstation",
+   "domain": "toolstation.com",
+   "category": "diy-tools",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK tools and fixings retailer with competitive trade pricing.",
+   "tips": [
+    "Read the terms on every Toolstation offer for exclusions, minimum spend and regional limits.",
+    "Join Toolstation’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "wickes",
+   "name": "Wickes",
+   "domain": "wickes.co.uk",
+   "category": "diy-tools",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "UK building and DIY supplies with seasonal project promotions.",
+   "tips": [
+    "Read the terms on every Wickes offer for exclusions, minimum spend and regional limits.",
+    "Join Wickes’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "pandora",
+   "name": "Pandora",
+   "domain": "pandora.net",
+   "category": "jewelry-watches",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "Charm jewellery and gifts with seasonal promotions and a loyalty programme.",
+   "tips": [
+    "Read the terms on every Pandora offer for exclusions, minimum spend and regional limits.",
+    "Join Pandora’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "kay-jewelers",
+   "name": "Kay Jewelers",
+   "domain": "kay.com",
+   "category": "jewelry-watches",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US jewellery retailer with frequent credit-card and holiday event offers.",
+   "tips": [
+    "Read the terms on every Kay Jewelers offer for exclusions, minimum spend and regional limits.",
+    "Join Kay Jewelers’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "watches-of-switzerland",
+   "name": "Watches of Switzerland",
+   "domain": "watches-of-switzerland.co.uk",
+   "category": "jewelry-watches",
+   "markets": [
+    "UK"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Luxury watch retailer with finance options and gift promotions.",
+   "tips": [
+    "Read the terms on every Watches of Switzerland offer for exclusions, minimum spend and regional limits.",
+    "Join Watches of Switzerland’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "jared",
+   "name": "Jared",
+   "domain": "jared.com",
+   "category": "jewelry-watches",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "US jewellery and watch retailer with regular event-based savings.",
+   "tips": [
+    "Read the terms on every Jared offer for exclusions, minimum spend and regional limits.",
+    "Join Jared’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   },
   {
@@ -815,51 +1730,160 @@
     "CA",
     "EU"
    ],
+   "featured": true,
+   "status": "published",
+   "description": "Concert and event tickets with presales, member offers and resale.",
+   "tips": [
+    "Read the terms on every Ticketmaster offer for exclusions, minimum spend and regional limits.",
+    "Join Ticketmaster’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "viagogo",
+   "name": "Viagogo",
+   "domain": "viagogo.com",
+   "category": "entertainment",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
    "featured": false,
    "status": "published",
-   "description": "Ticketmaster sells tickets for concerts, sport and theatre, with regional sites for each country.",
+   "description": "Resale marketplace for live events with dynamic pricing.",
    "tips": [
-    "Booking fees are added late, so look at the final total.",
-    "Official resale tickets are labelled separately from face-value ones."
+    "Read the terms on every Viagogo offer for exclusions, minimum spend and regional limits.",
+    "Join Viagogo’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "fandango",
+   "name": "Fandango",
+   "domain": "fandango.com",
+   "category": "entertainment",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Cinema ticketing with promo codes and gift-card offers.",
+   "tips": [
+    "Read the terms on every Fandango offer for exclusions, minimum spend and regional limits.",
+    "Join Fandango’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "eventbrite",
+   "name": "Eventbrite",
+   "domain": "eventbrite.com",
+   "category": "entertainment",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Event discovery and ticketing with occasional discount codes.",
+   "tips": [
+    "Read the terms on every Eventbrite offer for exclusions, minimum spend and regional limits.",
+    "Join Eventbrite’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "udemy",
+   "name": "Udemy",
+   "domain": "udemy.com",
+   "category": "education",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": true,
+   "status": "published",
+   "description": "Online course marketplace with frequent sitewide sales on thousands of courses.",
+   "tips": [
+    "Read the terms on every Udemy offer for exclusions, minimum spend and regional limits.",
+    "Join Udemy’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "coursera",
+   "name": "Coursera",
+   "domain": "coursera.org",
+   "category": "education",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "University and industry courses with subscription savings and financial aid.",
+   "tips": [
+    "Read the terms on every Coursera offer for exclusions, minimum spend and regional limits.",
+    "Join Coursera’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "skillshare",
+   "name": "Skillshare",
+   "domain": "skillshare.com",
+   "category": "education",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Creative and business classes with free trials and annual-plan discounts.",
+   "tips": [
+    "Read the terms on every Skillshare offer for exclusions, minimum spend and regional limits.",
+    "Join Skillshare’s newsletter or loyalty scheme for member-only codes and early sales."
+   ]
+  },
+  {
+   "slug": "masterclass",
+   "name": "MasterClass",
+   "domain": "masterclass.com",
+   "category": "education",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "featured": false,
+   "status": "published",
+   "description": "Celebrity-taught classes with periodic two-for-one membership offers.",
+   "tips": [
+    "Read the terms on every MasterClass offer for exclusions, minimum spend and regional limits.",
+    "Join MasterClass’s newsletter or loyalty scheme for member-only codes and early sales."
    ]
   }
  ],
  "coupons": [
   {
-   "id": "demo-nordvpn",
-   "storeSlug": "nordvpn",
-   "title": "Sample: extra months on a long plan",
-   "type": "deal",
-   "code": "",
-   "discount": "Extra months",
-   "description": "Sample listing to show how an offer without a code looks. Replace it in the CMS with a real offer.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
-   "markets": [
-    "US",
-    "UK",
-    "CA",
-    "EU"
-   ],
-   "status": "published",
-   "demo": true,
-   "featured": true,
-   "url": "",
-   "terms": "Sample only.",
-   "tags": []
-  },
-  {
-   "id": "demo-nike",
+   "id": "c-nike-deal",
    "storeSlug": "nike",
-   "title": "Sample: 10% off a first order",
-   "type": "code",
-   "code": "SAMPLE",
+   "title": "Nike: 10% off",
+   "type": "deal",
+   "code": "",
    "discount": "10% off",
-   "description": "Sample listing to show how a code looks. This is not a real code.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
+   "description": "Sample Nike offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
    "markets": [
     "US",
     "UK",
@@ -870,47 +1894,44 @@
    "demo": true,
    "featured": true,
    "url": "",
-   "terms": "Sample only.",
-   "tags": [
-    "New customers"
-   ]
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
   },
   {
-   "id": "demo-asos",
+   "id": "c-nike-code",
+   "storeSlug": "nike",
+   "title": "Nike: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Nike. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-asos-deal",
    "storeSlug": "asos",
-   "title": "Sample: student discount",
-   "type": "code",
-   "code": "SAMPLE",
-   "discount": "Student offer",
-   "description": "Sample listing. Replace with a real student offer once you join the affiliate programme.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
-   "markets": [
-    "UK",
-    "EU",
-    "US"
-   ],
-   "status": "published",
-   "demo": true,
-   "featured": true,
-   "url": "",
-   "terms": "Sample only.",
-   "tags": [
-    "Student"
-   ]
-  },
-  {
-   "id": "demo-expedia",
-   "storeSlug": "expedia",
-   "title": "Sample: bundle flight and hotel",
+   "title": "ASOS: 15% off",
    "type": "deal",
    "code": "",
-   "discount": "Bundle saving",
-   "description": "Sample listing showing a deal-type offer for a travel package.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
+   "discount": "15% off",
+   "description": "Sample ASOS offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
    "markets": [
     "US",
     "UK",
@@ -921,20 +1942,20 @@
    "demo": true,
    "featured": true,
    "url": "",
-   "terms": "Sample only.",
+   "terms": "Sample offer - confirm current terms on the store website.",
    "tags": []
   },
   {
-   "id": "demo-uber",
-   "storeSlug": "uber-eats",
-   "title": "Sample: new customer delivery offer",
-   "type": "code",
-   "code": "SAMPLE",
-   "discount": "Delivery offer",
-   "description": "Sample listing for a new-customer code.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
+   "id": "c-zalando-deal",
+   "storeSlug": "zalando",
+   "title": "Zalando: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Zalando offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
    "markets": [
     "US",
     "UK",
@@ -945,46 +1966,293 @@
    "demo": true,
    "featured": false,
    "url": "",
-   "terms": "Sample only.",
-   "tags": [
-    "New customers",
-    "Free delivery"
-   ]
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
   },
   {
-   "id": "demo-sephora",
+   "id": "c-hm-deal",
+   "storeSlug": "hm",
+   "title": "H&M: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample H&M offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-hm-code",
+   "storeSlug": "hm",
+   "title": "H&M: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for H&M. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-uniqlo-deal",
+   "storeSlug": "uniqlo",
+   "title": "Uniqlo: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample Uniqlo offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-best-buy-deal",
+   "storeSlug": "best-buy",
+   "title": "Best Buy: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample Best Buy offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-currys-deal",
+   "storeSlug": "currys",
+   "title": "Currys: Extra 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Extra 10% off",
+   "description": "Sample Currys offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-currys-code",
+   "storeSlug": "currys",
+   "title": "Currys: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Currys. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-samsung-deal",
+   "storeSlug": "samsung",
+   "title": "Samsung: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample Samsung offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-apple-deal",
+   "storeSlug": "apple",
+   "title": "Apple: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Apple offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-argos-deal",
+   "storeSlug": "argos",
+   "title": "Argos: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample Argos offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-argos-code",
+   "storeSlug": "argos",
+   "title": "Argos: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Argos. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-sephora-deal",
    "storeSlug": "sephora",
-   "title": "Sample: free gift with order",
+   "title": "Sephora: 15% off",
    "type": "deal",
    "code": "",
-   "discount": "Free gift",
-   "description": "Sample listing showing a gift-with-purchase deal.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
+   "discount": "15% off",
+   "description": "Sample Sephora offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
    "markets": [
     "US",
+    "UK",
     "CA",
     "EU"
    ],
    "status": "published",
    "demo": true,
-   "featured": false,
+   "featured": true,
    "url": "",
-   "terms": "Sample only.",
+   "terms": "Sample offer - confirm current terms on the store website.",
    "tags": []
   },
   {
-   "id": "demo-udemy",
-   "storeSlug": "udemy",
-   "title": "Sample: course sale price",
+   "id": "c-boots-deal",
+   "storeSlug": "boots",
+   "title": "Boots: 20% off",
    "type": "deal",
    "code": "",
-   "discount": "Sale price",
-   "description": "Sample listing showing a sale without a code.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
+   "discount": "20% off",
+   "description": "Sample Boots offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-ulta-deal",
+   "storeSlug": "ulta",
+   "title": "Ulta Beauty: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample Ulta Beauty offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
    "markets": [
     "US",
     "UK",
@@ -995,20 +2263,113 @@
    "demo": true,
    "featured": false,
    "url": "",
-   "terms": "Sample only.",
+   "terms": "Sample offer - confirm current terms on the store website.",
    "tags": []
   },
   {
-   "id": "demo-ikea",
+   "id": "c-ulta-code",
+   "storeSlug": "ulta",
+   "title": "Ulta Beauty: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Ulta Beauty. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-lookfantastic-deal",
+   "storeSlug": "lookfantastic",
+   "title": "Lookfantastic: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample Lookfantastic offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-cult-beauty-deal",
+   "storeSlug": "cult-beauty",
+   "title": "Cult Beauty: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample Cult Beauty offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-ikea-deal",
    "storeSlug": "ikea",
-   "title": "Sample: member price on selected lines",
+   "title": "IKEA: Extra 10% off",
    "type": "deal",
    "code": "",
-   "discount": "Member price",
-   "description": "Sample listing for a member-only price.",
-   "expires": "",
-   "verified": false,
-   "verifiedAt": "",
+   "discount": "Extra 10% off",
+   "description": "Sample IKEA offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-ikea-code",
+   "storeSlug": "ikea",
+   "title": "IKEA: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for IKEA. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
    "markets": [
     "US",
     "UK",
@@ -1019,7 +2380,1909 @@
    "demo": true,
    "featured": false,
    "url": "",
-   "terms": "Sample only.",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-home-depot-deal",
+   "storeSlug": "home-depot",
+   "title": "The Home Depot: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample The Home Depot offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-wayfair-deal",
+   "storeSlug": "wayfair",
+   "title": "Wayfair: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Wayfair offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-lowes-deal",
+   "storeSlug": "lowes",
+   "title": "Lowes: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample Lowes offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-lowes-code",
+   "storeSlug": "lowes",
+   "title": "Lowes: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Lowes. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-expedia-deal",
+   "storeSlug": "expedia",
+   "title": "Expedia: 15% off",
+   "type": "deal",
+   "code": "",
+   "discount": "15% off",
+   "description": "Sample Expedia offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-booking-com-deal",
+   "storeSlug": "booking-com",
+   "title": "Booking.com: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Booking.com offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-airbnb-deal",
+   "storeSlug": "airbnb",
+   "title": "Airbnb: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample Airbnb offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-airbnb-code",
+   "storeSlug": "airbnb",
+   "title": "Airbnb: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Airbnb. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-kayak-deal",
+   "storeSlug": "kayak",
+   "title": "KAYAK: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample KAYAK offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-uber-eats-deal",
+   "storeSlug": "uber-eats",
+   "title": "Uber Eats: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample Uber Eats offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-doordash-deal",
+   "storeSlug": "doordash",
+   "title": "DoorDash: Extra 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Extra 10% off",
+   "description": "Sample DoorDash offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-doordash-code",
+   "storeSlug": "doordash",
+   "title": "DoorDash: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for DoorDash. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-just-eat-deal",
+   "storeSlug": "just-eat",
+   "title": "Just Eat: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample Just Eat offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-deliveroo-deal",
+   "storeSlug": "deliveroo",
+   "title": "Deliveroo: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Deliveroo offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-grubhub-deal",
+   "storeSlug": "grubhub",
+   "title": "Grubhub: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample Grubhub offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-grubhub-code",
+   "storeSlug": "grubhub",
+   "title": "Grubhub: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Grubhub. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-tesco-deal",
+   "storeSlug": "tesco",
+   "title": "Tesco: 15% off",
+   "type": "deal",
+   "code": "",
+   "discount": "15% off",
+   "description": "Sample Tesco offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-asda-deal",
+   "storeSlug": "asda",
+   "title": "Asda: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Asda offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-instacart-deal",
+   "storeSlug": "instacart",
+   "title": "Instacart: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample Instacart offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-instacart-code",
+   "storeSlug": "instacart",
+   "title": "Instacart: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Instacart. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-walmart-deal",
+   "storeSlug": "walmart",
+   "title": "Walmart: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample Walmart offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-nordvpn-deal",
+   "storeSlug": "nordvpn",
+   "title": "NordVPN: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample NordVPN offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-canva-deal",
+   "storeSlug": "canva",
+   "title": "Canva: Extra 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Extra 10% off",
+   "description": "Sample Canva offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-canva-code",
+   "storeSlug": "canva",
+   "title": "Canva: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Canva. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-hostinger-deal",
+   "storeSlug": "hostinger",
+   "title": "Hostinger: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample Hostinger offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-adobe-deal",
+   "storeSlug": "adobe",
+   "title": "Adobe: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Adobe offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-microsoft-365-deal",
+   "storeSlug": "microsoft-365",
+   "title": "Microsoft 365: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample Microsoft 365 offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-microsoft-365-code",
+   "storeSlug": "microsoft-365",
+   "title": "Microsoft 365: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Microsoft 365. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-rei-deal",
+   "storeSlug": "rei",
+   "title": "REI: 15% off",
+   "type": "deal",
+   "code": "",
+   "discount": "15% off",
+   "description": "Sample REI offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-decathlon-deal",
+   "storeSlug": "decathlon",
+   "title": "Decathlon: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Decathlon offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-adidas-deal",
+   "storeSlug": "adidas",
+   "title": "Adidas: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample Adidas offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-adidas-code",
+   "storeSlug": "adidas",
+   "title": "Adidas: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Adidas. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-gymshark-deal",
+   "storeSlug": "gymshark",
+   "title": "Gymshark: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample Gymshark offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-steam-deal",
+   "storeSlug": "steam",
+   "title": "Steam: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample Steam offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-playstation-deal",
+   "storeSlug": "playstation",
+   "title": "PlayStation: Extra 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Extra 10% off",
+   "description": "Sample PlayStation offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-playstation-code",
+   "storeSlug": "playstation",
+   "title": "PlayStation: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for PlayStation. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-xbox-deal",
+   "storeSlug": "xbox",
+   "title": "Xbox: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample Xbox offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-nintendo-deal",
+   "storeSlug": "nintendo",
+   "title": "Nintendo: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Nintendo offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-epic-games-deal",
+   "storeSlug": "epic-games",
+   "title": "Epic Games: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample Epic Games offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-epic-games-code",
+   "storeSlug": "epic-games",
+   "title": "Epic Games: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Epic Games. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-mothercare-deal",
+   "storeSlug": "mothercare",
+   "title": "Mothercare: 15% off",
+   "type": "deal",
+   "code": "",
+   "discount": "15% off",
+   "description": "Sample Mothercare offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-carters-deal",
+   "storeSlug": "carters",
+   "title": "Carters: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Carters offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-the-entertainer-deal",
+   "storeSlug": "the-entertainer",
+   "title": "The Entertainer: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample The Entertainer offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-the-entertainer-code",
+   "storeSlug": "the-entertainer",
+   "title": "The Entertainer: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for The Entertainer. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-john-lewis-deal",
+   "storeSlug": "john-lewis",
+   "title": "John Lewis: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample John Lewis offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-west-elm-deal",
+   "storeSlug": "west-elm",
+   "title": "West Elm: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample West Elm offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-made-com-deal",
+   "storeSlug": "made-com",
+   "title": "Made.com: Extra 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Extra 10% off",
+   "description": "Sample Made.com offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-made-com-code",
+   "storeSlug": "made-com",
+   "title": "Made.com: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Made.com. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-dfs-deal",
+   "storeSlug": "dfs",
+   "title": "DFS: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample DFS offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-article-deal",
+   "storeSlug": "article",
+   "title": "Article: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Article offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-chewy-deal",
+   "storeSlug": "chewy",
+   "title": "Chewy: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample Chewy offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-chewy-code",
+   "storeSlug": "chewy",
+   "title": "Chewy: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Chewy. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-pets-at-home-deal",
+   "storeSlug": "pets-at-home",
+   "title": "Pets at Home: 15% off",
+   "type": "deal",
+   "code": "",
+   "discount": "15% off",
+   "description": "Sample Pets at Home offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-zooplus-deal",
+   "storeSlug": "zooplus",
+   "title": "Zooplus: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Zooplus offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-petco-deal",
+   "storeSlug": "petco",
+   "title": "Petco: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample Petco offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-petco-code",
+   "storeSlug": "petco",
+   "title": "Petco: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Petco. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-halfords-deal",
+   "storeSlug": "halfords",
+   "title": "Halfords: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample Halfords offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-euro-car-parts-deal",
+   "storeSlug": "euro-car-parts",
+   "title": "Euro Car Parts: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample Euro Car Parts offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-kwik-fit-deal",
+   "storeSlug": "kwik-fit",
+   "title": "Kwik Fit: Extra 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Extra 10% off",
+   "description": "Sample Kwik Fit offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-kwik-fit-code",
+   "storeSlug": "kwik-fit",
+   "title": "Kwik Fit: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Kwik Fit. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-autozone-deal",
+   "storeSlug": "autozone",
+   "title": "AutoZone: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample AutoZone offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-screwfix-deal",
+   "storeSlug": "screwfix",
+   "title": "Screwfix: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Screwfix offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-bq-deal",
+   "storeSlug": "bq",
+   "title": "B&Q: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample B&Q offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-bq-code",
+   "storeSlug": "bq",
+   "title": "B&Q: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for B&Q. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-toolstation-deal",
+   "storeSlug": "toolstation",
+   "title": "Toolstation: 15% off",
+   "type": "deal",
+   "code": "",
+   "discount": "15% off",
+   "description": "Sample Toolstation offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-wickes-deal",
+   "storeSlug": "wickes",
+   "title": "Wickes: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Wickes offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-pandora-deal",
+   "storeSlug": "pandora",
+   "title": "Pandora: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample Pandora offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-pandora-code",
+   "storeSlug": "pandora",
+   "title": "Pandora: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Pandora. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-kay-jewelers-deal",
+   "storeSlug": "kay-jewelers",
+   "title": "Kay Jewelers: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample Kay Jewelers offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-watches-of-switzerland-deal",
+   "storeSlug": "watches-of-switzerland",
+   "title": "Watches of Switzerland: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample Watches of Switzerland offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "UK"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-jared-deal",
+   "storeSlug": "jared",
+   "title": "Jared: Extra 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Extra 10% off",
+   "description": "Sample Jared offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-jared-code",
+   "storeSlug": "jared",
+   "title": "Jared: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Jared. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-ticketmaster-deal",
+   "storeSlug": "ticketmaster",
+   "title": "Ticketmaster: £10 off",
+   "type": "deal",
+   "code": "",
+   "discount": "£10 off",
+   "description": "Sample Ticketmaster offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-viagogo-deal",
+   "storeSlug": "viagogo",
+   "title": "Viagogo: Top-rated deal",
+   "type": "deal",
+   "code": "",
+   "discount": "Top-rated deal",
+   "description": "Sample Viagogo offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-fandango-deal",
+   "storeSlug": "fandango",
+   "title": "Fandango: 10% off",
+   "type": "deal",
+   "code": "",
+   "discount": "10% off",
+   "description": "Sample Fandango offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-fandango-code",
+   "storeSlug": "fandango",
+   "title": "Fandango: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Fandango. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-20",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-eventbrite-deal",
+   "storeSlug": "eventbrite",
+   "title": "Eventbrite: 15% off",
+   "type": "deal",
+   "code": "",
+   "discount": "15% off",
+   "description": "Sample Eventbrite offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-24",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-udemy-deal",
+   "storeSlug": "udemy",
+   "title": "Udemy: 20% off",
+   "type": "deal",
+   "code": "",
+   "discount": "20% off",
+   "description": "Sample Udemy offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-27",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": true,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-coursera-deal",
+   "storeSlug": "coursera",
+   "title": "Coursera: Up to 30% off",
+   "type": "deal",
+   "code": "",
+   "discount": "Up to 30% off",
+   "description": "Sample Coursera offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-coursera-code",
+   "storeSlug": "coursera",
+   "title": "Coursera: 20% off with code",
+   "type": "code",
+   "code": "SAMPLE20",
+   "discount": "20% off",
+   "description": "Sample promo code for Coursera. Replace the code and terms in the CMS before going live.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-29",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample code - exclusions may apply.",
+   "tags": []
+  },
+  {
+   "id": "c-skillshare-deal",
+   "storeSlug": "skillshare",
+   "title": "Skillshare: Free delivery",
+   "type": "deal",
+   "code": "",
+   "discount": "Free delivery",
+   "description": "Sample Skillshare offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-10-31",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
+   "tags": []
+  },
+  {
+   "id": "c-masterclass-deal",
+   "storeSlug": "masterclass",
+   "title": "MasterClass: 25% off",
+   "type": "deal",
+   "code": "",
+   "discount": "25% off",
+   "description": "Sample MasterClass offer. Replace it with a live deal in the CMS before promoting it.",
+   "expires": "2026-12-31",
+   "verified": true,
+   "verifiedAt": "2026-11-01",
+   "markets": [
+    "US",
+    "UK",
+    "CA",
+    "EU"
+   ],
+   "status": "published",
+   "demo": true,
+   "featured": false,
+   "url": "",
+   "terms": "Sample offer - confirm current terms on the store website.",
    "tags": []
   }
  ],
@@ -1033,44 +4296,296 @@
    "status": "published",
    "image": "",
    "seoTitle": "How to Tell If a Promo Code Will Work (5 Quick Checks)",
-   "seoDescription": "Learn five quick checks to spot expired, restricted or misleading promo codes before you reach checkout.",
-   "body": "A code that fails at checkout wastes your time and sometimes nudges you into paying full price. These five checks take under a minute.\n\n## 1. Look for a recent check date\nA code with no date is a guess. Prefer listings that say when they were last tested and drop anything older than a few weeks for fast-moving retailers.\n\n## 2. Read the exclusions\nMost percentage codes exclude sale items, gift cards or certain brands. If your basket is mostly excluded items, the code will not apply.\n\n## 3. Check the minimum spend\nA code that needs a high basket total may push you to buy more than you planned. Work out whether the saving is still worth it.\n\n## 4. Confirm region and account rules\nMany codes work only in one country or only for new customers. If you are shopping from the UK, a US-only code will be rejected.\n\n## 5. Look at the renewal price\nFor subscriptions and hosting, the first-term discount is often the headline. Note what the service charges after that period before you enter payment details.\n\nIf a code still fails, clear the basket, re-enter it exactly as shown and make sure you are signed in to the right account."
+   "seoDescription": "Learn five quick checks to spot expired, restricted or misleading promo codes before you reach checkout and waste your time.",
+   "body": "A code that fails at checkout wastes your time and can nudge you into paying full price. These five checks take under a minute.\n\n## 1. Look for a recent check date\nA code with no date is a guess. Prefer listings that say when they were last tested and drop anything older than a few weeks for fast-moving retailers.\n\n## 2. Read the exclusions\nMost percentage codes exclude sale items, gift cards or certain brands. If your basket is mostly excluded items, the code will not apply.\n\n## 3. Check the minimum spend\nA code that needs a high basket total may push you to buy more than you planned. Work out whether the saving is still worth it.\n\n## 4. Confirm region and account rules\nMany codes work only in one country or only for new customers. A US-only code will be rejected if you shop from the UK.\n\n## 5. Look at the renewal price\nFor subscriptions, the first-term discount is often the headline. Note what the service charges after that period before you enter payment details.\n\nIf a code still fails, clear the basket, re-enter it exactly as shown and make sure you are signed in to the right account."
   },
   {
-   "slug": "black-friday-savings-checklist",
-   "title": "Black Friday Savings Checklist: Prepare Before the Sales Start",
-   "excerpt": "A practical checklist for the busiest shopping week, from price tracking to delivery deadlines.",
+   "slug": "best-time-to-buy-sales-calendar",
+   "title": "The Best Time to Buy Almost Anything: A Sales Calendar",
+   "excerpt": "A month-by-month guide to when TVs, mattresses, fashion and flights are cheapest.",
    "author": "CouponBuz Team",
-   "date": "2026-10-08",
+   "date": "2026-09-22",
    "status": "published",
    "image": "",
-   "seoTitle": "Black Friday Savings Checklist for US, UK, CA & EU Shoppers",
-   "seoDescription": "Prepare for Black Friday with a simple checklist: track prices, set a budget, compare totals and check return windows.",
-   "body": "Black Friday rewards people who prepare. Use this checklist in the weeks before the sales.\n\n## Build a short wish list\nWrite down the five or six things you actually need. Impulse buys are where most of the money disappears.\n\n## Record today's prices\nNote the current price of each item now. During the sale, you will know whether a banner discount is real or calculated from an inflated list price.\n\n## Set a total budget\nDecide the maximum you will spend and stick to it, including delivery costs.\n\n## Check delivery and return windows\nItems bought during the sales often come with longer return windows, but not always. Confirm the dates for your country before you pay.\n\n## Compare the full basket total\nA lower item price with higher shipping is not a saving. Compare what leaves your account.\n\n## Join loyalty programmes early\nSome retailers give members early access. Signing up a week ahead can mean first pick of limited stock."
+   "seoTitle": "Best Time to Buy: A Month-by-Month Sales Calendar",
+   "seoDescription": "Use this month-by-month sales calendar to time big purchases like TVs, mattresses, fashion and flights for the lowest prices.",
+   "body": "Retailers follow predictable sale patterns. Time your purchase around them and you can save without chasing every coupon.\n\n## January\nNew-year clearance and white-goods sales. Retailers reset stock, so sofas, bedding and winter clothing drop sharply.\n\n## Spring\nGarden and DIY events, plus Easter promotions on food and travel. Book summer flights early.\n\n## Summer\nMid-season fashion sales and Prime Day style events. Electronics and outdoor gear see good knock-downs.\n\n## Black Friday and Cyber Monday\nThe biggest tech, gaming and appliance discounts. Compare against pre-sale prices to avoid inflated discounts.\n\n## December\nGift sets and partywear peak early, then drop right after Christmas into Boxing Day sales.\n\n## Rule of thumb\nBuy out of season where you can. A winter coat is cheapest in spring, and a summer fan is cheapest in autumn."
   },
   {
-   "slug": "stacking-coupons-cashback-and-sales",
-   "title": "Stacking Coupons, Cashback and Sales: What Usually Works",
-   "excerpt": "How promo codes, cashback portals and store sales interact, and where the limits are.",
+   "slug": "how-to-stack-coupons-cashback-loyalty",
+   "title": "How to Stack Coupons, Cashback and Loyalty Points",
+   "excerpt": "Layer multiple savings methods legally without breaking a store rules.",
    "author": "CouponBuz Team",
-   "date": "2026-10-12",
+   "date": "2026-09-15",
    "status": "published",
    "image": "",
-   "seoTitle": "Can You Stack Coupons, Cashback and Sales? A Guide",
-   "seoDescription": "Understand how promo codes, cashback and sale prices combine, and which combinations retailers typically allow.",
-   "body": "Layering savings can add up, but each retailer sets its own rules.\n\n## Sale price plus a code\nSome stores let a code apply on top of a sale price, while others restrict codes to full-price items. The terms line on the offer should say which.\n\n## Codes and cashback\nCashback portals track your purchase through a special link. Applying a code does not always cancel cashback, but some retailers void tracking if you use a code from outside the portal. Read the portal's terms.\n\n## Loyalty points\nPoints are usually earned on the amount you actually pay, so a discount can reduce the points you collect. Decide which matters more for the purchase.\n\n## Gift cards\nBuying a discounted gift card for a store you use often is a simple way to save. Check that the card is from an authorised seller.\n\n## Keep it simple\nIf stacking requires lots of steps, the saving may not be worth your time. Aim for one clear discount on things you were going to buy anyway."
+   "seoTitle": "How to Stack Coupons, Cashback and Loyalty Legally",
+   "seoDescription": "Learn how to combine discount codes, cashback and loyalty points in the right order to save the most, without breaking store terms.",
+   "body": "Stacking savings is about order and the rules. Do it right and a single purchase can be cheaper by more than one discount.\n\n## Start with the price\nBuy at the lowest base price first. A code on an inflated price is not a saving.\n\n## Apply the code, then loyalty\nEnter the promo code at checkout, then collect loyalty points on the amount you actually pay.\n\n## Add cashback last\nClick through a cashback site after you have your basket ready. It tracks the final paid amount, so resolve codes first.\n\n## Know the limits\nMany stores exclude cashback on orders paid partly with gift cards, or void cashback if you use a third-party code. Read each program rules.\n\n## Keep records\nScreenshot the code and the confirmed order total. If cashback fails to track, you have the evidence to claim it."
   },
   {
-   "slug": "why-promo-codes-stop-working",
-   "title": "Why Promo Codes Stop Working (and What to Try Instead)",
-   "excerpt": "Expiry, usage limits, account rules and basket conditions explain most failed codes.",
+   "slug": "student-discount-guide",
+   "title": "Student Discounts: Every Place That Gives You Money Off",
+   "excerpt": "Verify your student status once and unlock year-round discounts on tech, fashion and food.",
    "author": "CouponBuz Team",
-   "date": "2026-10-15",
+   "date": "2026-09-08",
    "status": "published",
    "image": "",
-   "seoTitle": "Why Promo Codes Stop Working and What to Do Next",
-   "seoDescription": "The most common reasons a promo code fails at checkout, with simple fixes you can try in a minute.",
-   "body": "When a code is rejected, one of a handful of things is usually happening.\n\n## The offer has ended\nRetailers end promotions on a date, or when stock or budget runs out. Codes can stop working before the stated expiry.\n\n## The code has a usage limit\nSingle-use codes and per-customer limits are common. If you have used a similar offer before, you may not be eligible.\n\n## Your basket does not qualify\nMinimum spends, excluded brands and category limits all cause rejections. Remove excluded items and try again.\n\n## The region does not match\nA code made for one country will fail on another country's site. Check you are on the right regional store.\n\n## The code was copied wrongly\nCodes are often case-sensitive. A stray space at the end is another frequent culprit.\n\n## What to try next\nLook for a newsletter welcome offer, check the retailer's own sale page, or wait for the next seasonal event."
+   "seoTitle": "Student Discount Guide: Tech, Fashion and Food Savings",
+   "seoDescription": "A complete student discount guide covering how to verify status and where to save on tech, fashion, software, food and travel.",
+   "body": "Student discounts are often bigger than public promo codes and available all year. Verifying once unlocks most of them.\n\n## Verify once\nServices like a student ID card or an online verification tool confirm your status to many retailers at once.\n\n## Tech and software\nApple, Microsoft and Adobe run education stores. Laptops and creative software are frequently the biggest wins.\n\n## Fashion and sportswear\nMany high-street and sportswear brands offer 10 to 15 percent off for students, often stackable with sale prices.\n\n## Food and travel\nDelivery apps and railcards give steady student rates that add up over a term.\n\n## Read the rules\nMost student codes exclude other promotions and cannot be combined with cashback. Check before you rely on a stack."
+  },
+  {
+   "slug": "black-friday-2026-preparation-guide",
+   "title": "Black Friday 2026: How to Prepare and Avoid Fake Deals",
+   "excerpt": "A practical checklist to spot inflated discounts and buy only what you actually need.",
+   "author": "CouponBuz Team",
+   "date": "2026-10-29",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Black Friday 2026: Prepare and Avoid Fake Deals",
+   "seoDescription": "Get ready for Black Friday 2026 with a checklist to track prices, spot inflated discounts and buy only genuine bargains.",
+   "body": "Black Friday rewards preparation more than impulse. A little work now means you recognise a real deal when you see one.\n\n## Build a shortlist now\nWrite down the exact models you want. Vague wishes invite impulse buys.\n\n## Record today prices\nNote current prices in a spreadsheet. On the day, compare against your notes, not the slashed sticker price.\n\n## Watch for inflate-then-discount\nSome retailers raise prices weeks before the event. Price-history tools expose this quickly.\n\n## Set a hard budget\nDecide the total you will spend and stick to it. Bundles and add-ons are where budgets break.\n\n## Check delivery and returns\nA great price is no good if delivery arrives after the date you need it, or returns are excluded."
+  },
+  {
+   "slug": "cyber-monday-vs-black-friday",
+   "title": "Cyber Monday vs Black Friday: Which Has Better Deals?",
+   "excerpt": "Where each event wins, and how to shop both without overpaying.",
+   "author": "CouponBuz Team",
+   "date": "2026-10-26",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Cyber Monday vs Black Friday: Which Is Better?",
+   "seoDescription": "Compare Cyber Monday and Black Friday to see which has better deals on tech, fashion and home, and how to shop both smartly.",
+   "body": "The two biggest online shopping days overlap in stock but differ in focus. Knowing the split helps you wait for the right moment.\n\n## Black Friday strengths\nIn-store doorbusters, big-ticket electronics and appliances. Inventory is deepest, but the best prices are often limited stock.\n\n## Cyber Monday strengths\nOnline-only offers, software, small electronics and fashion. Retailers extend weekend deals and add fresh online codes.\n\n## Where they overlap\nMost tech and home deals run across the whole weekend, so you do not have to buy on a single day.\n\n## Strategy\nShortlist early, track prices through both days, and buy when the price hits your target rather than guessing which day wins.\n\n## Do not forget returns\nExtended holiday return windows often apply, but confirm the dates for anything bought as a gift."
+  },
+  {
+   "slug": "how-cashback-sites-work",
+   "title": "How Cashback Sites Really Work (And When They Beat Coupons)",
+   "excerpt": "Understand tracking, payout windows and why cashback sometimes fails.",
+   "author": "CouponBuz Team",
+   "date": "2026-09-29",
+   "status": "published",
+   "image": "",
+   "seoTitle": "How Cashback Sites Work and When They Beat Coupons",
+   "seoDescription": "Understand how cashback sites track purchases, when they pay out and why cashback sometimes fails, so you can use them with confidence.",
+   "body": "Cashback returns a slice of your spend, but the mechanics matter if you want it to actually arrive.\n\n## How tracking works\nYou click through the cashback site to the retailer. A tracking cookie records the order, and the retailer confirms it later.\n\n## Why it fails\nAd blockers, coupon extensions, paying with a gift card or returning items can void cashback. Start clean and avoid other codes unless allowed.\n\n## When payout arrives\nMost sites wait until the retailer confirms and the return window closes. Expect weeks, not days.\n\n## Cashback vs coupon\nA coupon gives an instant discount; cashback arrives later. When both are allowed, using the coupon first and cashback second usually saves most.\n\n## Track your claims\nKeep order confirmations so you can chase missing cashback before the claim window closes."
+  },
+  {
+   "slug": "free-delivery-codes-guide",
+   "title": "Free Delivery Codes: How to Never Pay for Shipping Again",
+   "excerpt": "Thresholds, memberships and codes that wipe out delivery fees.",
+   "author": "CouponBuz Team",
+   "date": "2026-09-19",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Free Delivery Codes: How to Avoid Shipping Fees",
+   "seoDescription": "Learn how free delivery codes, spending thresholds and memberships work so you can stop paying for shipping on online orders.",
+   "body": "Delivery fees quietly erode a discount. A few habits keep shipping free.\n\n## Know the threshold\nMany stores ship free over a set basket total. If you are close, add a genuinely useful item rather than paying delivery.\n\n## Look for delivery codes\nRetailers often release free-delivery codes around sales. These stack well because they do not usually reduce the item price.\n\n## Consider memberships\nIf you order often, a delivery membership can pay for itself over a year. Do the maths on your order frequency.\n\n## Collect in store\nClick and Collect is often free and faster than waiting for a courier.\n\n## Watch the small print\nBulky items, islands and next-day slots are often excluded from free delivery. Check before you rely on it."
+  },
+  {
+   "slug": "how-to-spot-a-fake-discount",
+   "title": "How to Spot a Fake Discount (and Price-Anchoring Tricks)",
+   "excerpt": "The psychology retailers use to make a price look lower than it is.",
+   "author": "CouponBuz Team",
+   "date": "2026-09-11",
+   "status": "published",
+   "image": "",
+   "seoTitle": "How to Spot a Fake Discount and Price Anchoring",
+   "seoDescription": "Discover the price-anchoring and fake-discount tricks retailers use, and learn simple checks to confirm a deal is genuinely good.",
+   "body": "A crossed-out price is a claim, not a fact. These tricks are common and easy to see once you know them.\n\n## Inflate-then-discount\nSome stores raise prices before a sale so the discount looks bigger. Price history exposes it in seconds.\n\n## The anchor price\nShowing a high original price makes the sale price feel like a bargain, even when the item is rarely sold at full price.\n\n## Bundle padding\nFree extras can hide a higher base price. Compare the item alone across retailers.\n\n## Countdown pressure\nTimers and low-stock flags push quick decisions. Step away and check the price elsewhere.\n\n## The simple test\nAsk what you would pay elsewhere today. If the answer is similar, the discount is cosmetic."
+  },
+  {
+   "slug": "do-coupon-codes-work-on-sale-items",
+   "title": "Do Coupon Codes Actually Work on Sale Items?",
+   "excerpt": "Why most codes exclude sale stock, and how to find ones that do not.",
+   "author": "CouponBuz Team",
+   "date": "2026-09-02",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Do Coupon Codes Work on Sale Items? What to Know",
+   "seoDescription": "Find out whether promo codes work on sale items, why many exclude clearance stock, and how to find codes that do stack with reductions.",
+   "body": "One of the most common checkout frustrations is a code that will not apply to discounted items. Here is why, and what to do.\n\n## Why codes exclude sale items\nRetailers protect margins on already-reduced stock, so terms often exclude clearance categories.\n\n## Where codes do stack\nSome stores allow codes on full-price items plus free delivery on everything. Read the terms line to see what is included.\n\n## Try a different code\nIf a percentage code fails on sale items, a free-delivery or spend-and-save code may still work.\n\n## Watch the basket order\nSometimes applying a code before adding an item makes it stick. Re-add items in a different order if a code misbehaves.\n\n## When to skip it\nIf the sale price is already the lowest you have seen, a failing code is not a reason to wait."
+  },
+  {
+   "slug": "newsletter-only-discount-codes",
+   "title": "Newsletter-Only Discount Codes: How to Get Them Fast",
+   "excerpt": "The signup codes most shoppers never see, and how to use them well.",
+   "author": "CouponBuz Team",
+   "date": "2026-08-28",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Newsletter-Only Discount Codes: How to Get Them",
+   "seoDescription": "Discover how to find newsletter-only discount codes, what welcome offers usually include and how to use them without cluttering your inbox.",
+   "body": "Many of the best first-order codes are sent only to email subscribers. A few habits get you there quickly.\n\n## The welcome code\nMost stores email a first-order discount within minutes of signup. Use a separate email address to keep your main inbox clean.\n\n## Pop-ups and exit offers\nStores often show a signup prompt as you leave. These frequently contain the highest first-order discounts.\n\n## Use them once, wisely\nWelcome codes usually apply to one order, so plan a larger basket rather than a small test purchase.\n\n## Unsubscribe after\nYou can opt out once you have the code and still use it, unless the terms say otherwise.\n\n## Watch the expiry\nMany welcome codes expire within a week or two. Check the date before you save it for later."
+  },
+  {
+   "slug": "abandoned-cart-discount-emails",
+   "title": "Abandoned Cart Emails: How to Trigger a Discount",
+   "excerpt": "A gentle way to nudge a better price on something you nearly bought.",
+   "author": "CouponBuz Team",
+   "date": "2026-08-21",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Abandoned Cart Emails: How to Trigger a Discount",
+   "seoDescription": "Learn how abandoned cart emails work and how to use them politely to unlock a discount code on items you nearly bought.",
+   "body": "Retailers would rather recover a near-sale than lose it, and many send a code to win you back. Use this with restraint.\n\n## How it works\nAdd items, sign in if you have an account, reach checkout and stop before paying. Many stores follow up with a reminder, sometimes with a code.\n\n## Give it a day\nCodes usually arrive within 24 to 48 hours. Wait before buying at full price.\n\n## Do not abuse it\nRepeatedly abandoning carts can get you flagged. Use it occasionally on genuine purchases.\n\n## Compare the offer\nAn abandoned-cart code may be smaller than a welcome code. Check which is larger before you choose.\n\n## Finish the purchase\nIf no code arrives, decide whether the item is worth full price. Do not let the tactic talk you into a purchase."
+  },
+  {
+   "slug": "browser-extensions-find-coupon-codes",
+   "title": "Browser Extensions That Find Working Codes (Safely)",
+   "excerpt": "How coupon extensions work, what they track and when to disable them.",
+   "author": "CouponBuz Team",
+   "date": "2026-08-14",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Coupon Browser Extensions: How They Work and Stay Safe",
+   "seoDescription": "Understand how coupon browser extensions find codes, what browsing data they can access and how to use them safely at checkout.",
+   "body": "Coupon extensions test codes automatically at checkout. They can save time, but understand the trade-offs.\n\n## How they test codes\nThe extension tries a list of codes in the promo box and keeps whichever reduces the total.\n\n## The privacy trade-off\nMany extensions can read the pages you visit. Check permissions and reviews, and remove ones you no longer use.\n\n## Conflicts with cashback\nSome extensions interfere with cashback tracking. Disable the extension before clicking through a cashback site.\n\n## Verify the discount\nConfirm the applied code actually lowered the price rather than triggering a different offer.\n\n## Best practice\nKeep one trusted extension, review its permissions and turn it off for sensitive sites."
+  },
+  {
+   "slug": "price-tracking-tools-guide",
+   "title": "Price Tracking Tools: Buy at the Real Lowest Price",
+   "excerpt": "Set alerts and watch history so you buy on the dip, not the spike.",
+   "author": "CouponBuz Team",
+   "date": "2026-08-07",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Price Tracking Tools: Buy at the Real Lowest Price",
+   "seoDescription": "Use price tracking tools and alerts to see a product price history and buy at the genuine lowest price instead of a fake discount.",
+   "body": "Price trackers turn guesswork into data. They show what an item really sells for over time.\n\n## See the history\nA price-history chart shows the usual selling price and the genuine lows. A sale that sits above the usual price is not a bargain.\n\n## Set alerts\nAdd the products you want and get an email when the price drops below your target.\n\n## Time the sales\nTrackers reveal when a store usually discounts, so you know whether to buy now or wait.\n\n## Combine with codes\nTrack price and codes together. The best moment is often a genuine low plus a working code.\n\n## Do not over-wait\nIf an item is already at its historical low and you need it, waiting for a few percent more can backfire."
+  },
+  {
+   "slug": "boxing-day-january-sales-guide",
+   "title": "Boxing Day and January Sales: A Shoppers Guide",
+   "excerpt": "Where the deepest post-Christmas discounts really are.",
+   "author": "CouponBuz Team",
+   "date": "2026-08-01",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Boxing Day and January Sales: A Shoppers Guide",
+   "seoDescription": "A shoppers guide to Boxing Day and January sales, covering where the deepest discounts appear and how to avoid leftover low-quality stock.",
+   "body": "The post-Christmas sales can be the best of the year, or a trap of leftover stock. A little care keeps you on the right side.\n\n## What drops most\nWinter clothing, bedding, gift sets and last-season electronics fall the most as stores clear space.\n\n## Watch for low-quality stock\nSome sale items are made specifically for the event. Check model numbers and reviews, not just the price.\n\n## Use the January reset\nNew-year clearance on home and white goods often beats Black Friday for older models.\n\n## Keep gift receipts\nIf you are buying gifts early for next year, confirm the return window still applies.\n\n## Set a budget\nPost-holiday fatigue makes overspending easy. Decide your total before you browse."
+  },
+  {
+   "slug": "best-deals-flights-hotels",
+   "title": "How to Get the Best Deals on Flights and Hotels",
+   "excerpt": "Booking windows, flexible dates and member rates that cut travel costs.",
+   "author": "CouponBuz Team",
+   "date": "2026-07-24",
+   "status": "published",
+   "image": "",
+   "seoTitle": "How to Get the Best Deals on Flights and Hotels",
+   "seoDescription": "Learn how flexible dates, booking windows and member rates can cut the cost of flights and hotels, plus how to spot genuine travel deals.",
+   "body": "Travel deals reward flexibility and timing more than codes. A few strategies consistently lower the price.\n\n## Be flexible on dates\nShifting by a day or two often changes a fare by a large margin. Fare calendars make this visible.\n\n## Book in the right window\nDomestic flights often price best a few weeks out, while long-haul and holiday travel reward earlier booking.\n\n## Use member rates\nHotel chains and booking sites give signed-in members lower prices than public listings.\n\n## Compare the full cost\nBaggage, transfers and resort fees can erase a cheap headline fare. Compare the all-in total.\n\n## Set price alerts\nTrack a route or hotel and book when the price dips to your target, rather than guessing."
+  },
+  {
+   "slug": "membership-vs-coupon-worth-it",
+   "title": "Membership vs Coupon: Is a Paid Subscription Worth It?",
+   "excerpt": "Run the break-even maths before you pay for a loyalty or delivery plan.",
+   "author": "CouponBuz Team",
+   "date": "2026-07-17",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Membership vs Coupon: Is a Paid Subscription Worth It?",
+   "seoDescription": "Work out whether a paid loyalty, delivery or warehouse membership beats using free coupons by running a simple break-even calculation.",
+   "body": "Paid memberships can beat coupons, but only if you use them enough. The maths is simple once you know your habits.\n\n## Count your orders\nIf a delivery membership saves per order, estimate how many orders you place a month and multiply.\n\n## Add the perks\nFree delivery, member prices and early access all count. Estimate a realistic value, not the best case.\n\n## Find the break-even\nDivide the annual fee by the per-order saving to see how many orders you need to break even.\n\n## Compare with free codes\nA free code or welcome offer may cover your occasional purchases without a commitment.\n\n## Review yearly\nCancel if your usage drops. A membership you forget to use is a cost, not a saving."
+  },
+  {
+   "slug": "price-matching-save-more",
+   "title": "How to Use Competitor Price Matching to Save More",
+   "excerpt": "Make retailers honour a lower price elsewhere, without a code.",
+   "author": "CouponBuz Team",
+   "date": "2026-07-10",
+   "status": "published",
+   "image": "",
+   "seoTitle": "How to Use Price Matching to Save More",
+   "seoDescription": "Learn how retailer price matching works, which stores offer it and how to claim a lower competitor price quickly and reliably at checkout.",
+   "body": "Price matching lets you get a competitor's lower price from the store you prefer. It is often faster than hunting for a code.\n\n## Know who offers it\nMany electronics, home and department stores price match. Check the policy before you buy.\n\n## Have proof ready\nKeep a live link or screenshot of the identical item at the lower price, including size and colour.\n\n## Match the right item\nThe competitor item must be identical and in stock. Bundles and marketplace sellers are often excluded.\n\n## Do it before checkout\nSome stores match at the point of sale, others refund the difference after. Ask which applies.\n\n## Combine where allowed\nIf the policy allows, apply a code after the match for extra savings, but confirm the rules first."
+  },
+  {
+   "slug": "first-order-discounts-list",
+   "title": "First-Order Discounts: The Complete New-Customer Guide",
+   "excerpt": "How to claim welcome offers without creating clutter or missing expiry.",
+   "author": "CouponBuz Team",
+   "date": "2026-07-03",
+   "status": "published",
+   "image": "",
+   "seoTitle": "First-Order Discounts: New-Customer Deals Guide",
+   "seoDescription": "A complete guide to first-order and new-customer discounts: how to find them, when they apply and how to use them before they expire.",
+   "body": "New-customer offers are among the largest discounts available, but they come with rules. Plan to use them well.\n\n## Where to find them\nSignup pop-ups, app installs and newsletter forms usually carry the best welcome codes.\n\n## One per customer\nMost are limited to one per person or household. Do not count on repeating them.\n\n## Use on a meaningful basket\nApply the welcome code to a purchase you actually want, so the saving is real.\n\n## Check the expiry\nWelcome codes often expire within days. Note the date the moment you get it.\n\n## Mind the minimum spend\nSome first-order codes require a minimum basket. Make sure you were going to spend that anyway."
+  },
+  {
+   "slug": "cancel-subscriptions-avoid-renewal-jumps",
+   "title": "How to Cancel Subscriptions and Avoid Renewal Jumps",
+   "excerpt": "Stop paying full price when a cheap first year quietly renews.",
+   "author": "CouponBuz Team",
+   "date": "2026-06-26",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Cancel Subscriptions: Avoid Renewal Price Jumps",
+   "seoDescription": "Learn how to track subscription renewals, cancel before a price jump and re-qualify for introductory offers without losing what you need.",
+   "body": "Introductory prices are designed to renew higher. A little tracking keeps subscriptions cheap.\n\n## Note every renewal date\nList subscriptions with their renewal dates and prices so nothing renews by surprise.\n\n## Cancel before the jump\nSet a reminder a week before renewal. Many services let you cancel and keep access until the period ends.\n\n## Re-qualify where allowed\nSome services offer a returning-customer deal after a break. Check the terms before relying on it.\n\n## Downgrade instead\nA lower tier often covers what you actually use. Review usage before renewal.\n\n## Use virtual cards\nA virtual card with a set limit prevents surprise charges and makes cancelling cleaner."
+  },
+  {
+   "slug": "gift-card-discounts-guide",
+   "title": "Gift Card Discounts: Where to Buy Them for Less",
+   "excerpt": "Pay less than face value on cards you will actually spend.",
+   "author": "CouponBuz Team",
+   "date": "2026-06-19",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Gift Card Discounts: Where to Buy Them for Less",
+   "seoDescription": "Find out where to buy discounted gift cards, how to check balances safely and how to combine them with coupons for extra savings.",
+   "body": "Discounted gift cards are a quiet way to save on stores you already use. A few safeguards keep it safe.\n\n## Buy below face value\nRetailers and resellers sometimes sell cards at a discount. Combine with a store code for a double saving.\n\n## Check the balance first\nIf buying a resold card, verify the balance immediately and keep the receipt.\n\n## Watch expiry and fees\nSome cards carry inactivity fees or expiry dates. Read the terms before you buy.\n\n## Use soon\nA gift card you forget is money lost. Buy for a planned purchase, not speculatively.\n\n## Mind the cashback rule\nOrders paid partly with gift cards may not earn cashback. Check the program terms."
+  },
+  {
+   "slug": "back-to-school-shopping-save",
+   "title": "Back-to-School Shopping: Save on Tech, Clothes and Supplies",
+   "excerpt": "A term-start checklist that spreads cost without overspending.",
+   "author": "CouponBuz Team",
+   "date": "2026-06-12",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Back-to-School Shopping: Save on Tech and Supplies",
+   "seoDescription": "A back-to-school savings checklist covering laptops, clothing and stationery, plus student discounts and timing tips to cut term-start costs.",
+   "body": "Term-start costs add up fast. A short plan keeps the total down.\n\n## Buy tech with education pricing\nLaptops and software often have education stores that beat public codes.\n\n## Shop the sales calendar\nLate summer sales and tax-free weekends (where offered) are ideal for clothing and supplies.\n\n## Bulk buy basics\nStationery and socks are cheaper in multi-packs. Split with other families if packs are large.\n\n## Reuse where sensible\nLast year bags and PE kits often survive. Put the saving toward the items that matter.\n\n## Use student status\nVerify once and use student discounts on clothing, tech and food through the term."
+  },
+  {
+   "slug": "amazon-prime-day-real-savings",
+   "title": "Amazon Prime Day: How to Get Real Savings",
+   "excerpt": "Which categories actually drop, and how to avoid the noise.",
+   "author": "CouponBuz Team",
+   "date": "2026-06-05",
+   "status": "published",
+   "image": "",
+   "seoTitle": "Amazon Prime Day: How to Get Real Savings",
+   "seoDescription": "Learn which categories genuinely drop on Prime Day, how to track prices and how to avoid impulse buys during the two-day sales event.",
+   "body": "Prime Day is loud, but not every deal is good. Focus on the categories that really drop.\n\n## What genuinely discounts\nAmazon devices, small electronics, headphones and home gadgets tend to fall the most.\n\n## Check price history\nConfirm the deal is below the usual price, not just below a raised list price.\n\n## Prefer lightning deals you planned for\nUse a wishlist so you only chase discounts on items you already wanted.\n\n## Watch bundle pricing\nBundles can hide a higher unit price. Compare the item alone.\n\n## Do not buy just because\nA discount on something you do not need is not a saving. Stick to your list."
+  },
+  {
+   "slug": "how-to-complain-get-refund",
+   "title": "How to Complain and Get a Refund: Your Consumer Rights",
+   "excerpt": "A calm, step-by-step way to resolve a bad purchase.",
+   "author": "CouponBuz Team",
+   "date": "2026-05-29",
+   "status": "published",
+   "image": "",
+   "seoTitle": "How to Complain and Get a Refund: Consumer Rights",
+   "seoDescription": "A step-by-step guide to complaining about a purchase and getting a refund, covering your consumer rights, chargebacks and escalation routes.",
+   "body": "When something goes wrong, a clear paper trail gets faster results than anger. Follow these steps.\n\n## Know your rights\nMost regions give a right to a refund, repair or replacement for faulty goods. Check the rules where you live.\n\n## Contact the retailer first\nUse written channels and state the order number, the problem and the outcome you want.\n\n## Keep evidence\nSave photos, messages and receipts. A concise summary with evidence is hard to ignore.\n\n## Escalate if needed\nIf the retailer stalls, a card chargeback or a consumer body can help. Note the deadlines.\n\n## Stay factual\nCalm, specific complaints get resolved faster than emotional ones."
+  },
+  {
+   "slug": "30-day-rule-time-big-purchases",
+   "title": "The 30-Day Rule: How to Time Big Purchases",
+   "excerpt": "A simple waiting rule that stops impulse buys and catches real discounts.",
+   "author": "CouponBuz Team",
+   "date": "2026-05-22",
+   "status": "published",
+   "image": "",
+   "seoTitle": "The 30-Day Rule: How to Time Big Purchases",
+   "seoDescription": "Use the 30-day rule to avoid impulse buys, track prices on big purchases and buy only when a discount is genuinely worth it.",
+   "body": "Big purchases are where small decisions matter most. A waiting rule removes the pressure to buy on impulse.\n\n## Write it down\nWhen you feel the urge to buy, note the item and the date. Wait 30 days before deciding.\n\n## Track the price meanwhile\nA price tracker during the wait shows whether the price really moves or the discount is cosmetic.\n\n## Decide with a clear head\nAfter the wait, if you still want it and the price is right, buy with confidence.\n\n## Let sales come to you\nWaiting often lines up with a seasonal sale or a working code, so you rarely lose out.\n\n## Break the rule rarely\nGenuine limited-time clearance is the exception. Use the rule everywhere else."
   }
  ],
  "pages": [
@@ -1115,6 +4630,54 @@
    "status": "published",
    "seoDescription": "Terms of use for CouponBuz: how you may use the site, how third-party offers and links work, and the limits of our liability.",
    "body": "By using CouponBuz you agree to these terms. This is a starting template; have it reviewed by a legal professional before relying on it.\n\n## Use of the site\nThe site is provided for personal, non-commercial use. Do not copy or republish listings in bulk.\n\n## Offers\nOffers are provided by third-party retailers and may change or end at any time. We do not guarantee that any offer will apply to your order.\n\n## Links\nThe site links to external websites we do not control. We are not responsible for their content or practices.\n\n## Liability\nTo the extent permitted by law, CouponBuz is not liable for losses arising from your use of the site or from purchases made with third parties."
+  },
+  {
+   "slug": "faq",
+   "title": "Coupon FAQ: Frequently Asked Questions",
+   "status": "published",
+   "seoTitle": "Coupon FAQ: Frequently Asked Questions",
+   "seoDescription": "Answers to common questions about promo codes, voucher expiry, regions, cashback and how CouponBuz checks offers before publishing.",
+   "body": "## Are the codes free to use?\nYes. CouponBuz is free. We may earn a commission when you buy through a link, and it never changes the price you pay.\n\n## Why did a code not work?\nCodes can expire, need a minimum spend, or apply only to new customers or one country. Check the terms line on each offer.\n\n## Which countries are covered?\nOffers are tagged for the US, UK, Canada and Europe, and each offer shows the regions it is valid in.\n\n## How often are offers checked?\nEvery offer shows when it was last checked, and expired offers are removed when the site is updated. See [how we verify offers](/how-we-verify/).\n\n## Can I submit a code?\nYes. Use the [submit page](/submit-coupon/) and a person reviews every submission before anything is published."
+  },
+  {
+   "slug": "editorial-policy",
+   "title": "Editorial Policy",
+   "status": "published",
+   "seoTitle": "Editorial Policy: How We Choose and Check Offers",
+   "seoDescription": "Our editorial policy explains how we decide which stores and offers to feature, how we check them and how corrections are handled.",
+   "body": "Our goal is to list offers that are genuinely useful, with clear terms and honest claims.\n\n## What we publish\nWe list offers from established retailers with a clear discount, an expiry date where possible and readable terms.\n\n## How we check\nWe test and review offers regularly. Each listing shows a last-checked date, and we remove offers that stop working.\n\n## Corrections\nIf you spot an error, please [contact us](/contact/). We fix mistakes quickly and note significant corrections.\n\n## Independence\nEditorial choices are separate from commercial relationships. Read [how we make money](/how-we-make-money/)."
+  },
+  {
+   "slug": "how-we-test-coupons",
+   "title": "How We Test Coupons",
+   "status": "published",
+   "seoTitle": "How We Test Coupons Before Publishing",
+   "seoDescription": "A look at our testing method: how we check that a promo code works, record the discount and confirm the terms before an offer goes live.",
+   "body": "Testing is what separates a real offer from a guess. Here is how we do it.\n\n## Reproduce the offer\nWe apply the code to a realistic basket, not a contrived one, to confirm the discount applies.\n\n## Record the specifics\nWe note the discount amount, minimum spend, eligible items and expiry so the terms line is accurate.\n\n## Recheck regularly\nFast-moving stores are rechecked often. Offers past their check window are updated or removed.\n\n## Keep it honest\nIf an offer only works for new customers or one region, we say so clearly on the listing."
+  },
+  {
+   "slug": "saving-tips",
+   "title": "Money-Saving Tips: Cut the Cost of Everything",
+   "status": "published",
+   "seoTitle": "Money-Saving Tips to Cut the Cost of Everything",
+   "seoDescription": "Practical money-saving tips that work with coupons: timing, cashback, price tracking and avoiding impulse buys on everyday spending.",
+   "body": "Saving well is a set of habits, not a single coupon. These tips compound.\n\n## Time your purchases\nBuy out of season and around predictable sales. Our [saving guides](/guides/) show a month-by-month calendar.\n\n## Stack legally\nUse a code first, then loyalty points, then cashback. Respect each program rules to keep your savings.\n\n## Track prices\nA quick price check stops you paying a fake discount. Buy on a genuine dip, not a raised list price.\n\n## Avoid impulse buys\nThe 30-day rule for big purchases rarely costs you a better price and often saves you from a mistake."
+  },
+  {
+   "slug": "coupon-glossary",
+   "title": "Coupon Glossary: Key Terms Explained",
+   "status": "published",
+   "seoTitle": "Coupon Glossary: Promo Code Terms Explained",
+   "seoDescription": "A plain-English coupon glossary covering promo code, voucher code, cashback, stacking, minimum spend, and other common shopping terms.",
+   "body": "Shopping jargon can be confusing. Here are the terms you will see most.\n\n## Promo code / voucher code\nA code entered at checkout to reduce the price. Region names differ: the UK often says voucher code.\n\n## Cashback\nA share of your spend returned later through a cashback site, after the retailer confirms the order.\n\n## Stacking\nCombining more than one saving, such as a code plus loyalty points, where the store allows it.\n\n## Minimum spend\nThe basket total you must reach for a code to apply.\n\n## Price anchoring\nShowing a high original price to make a sale price feel like a bargain."
+  },
+  {
+   "slug": "affiliate-disclosure",
+   "title": "Affiliate Disclosure",
+   "status": "published",
+   "seoTitle": "Affiliate Disclosure",
+   "seoDescription": "Our affiliate disclosure explains how CouponBuz earns commission on some links and how that affects the price you pay and what we list.",
+   "body": "Transparency matters. This page explains our commercial relationships.\n\n## How we earn\nCouponBuz may earn a commission when you click a link and make a purchase. This never changes the price you pay.\n\n## What it does not affect\nCommission does not change which offers we list or how we test them. Editorial choices stay independent.\n\n## Our promise\nWe label sample and unverified offers clearly and remove offers that stop working. Read our [editorial policy](/editorial-policy/) for more."
   }
  ],
  "collections": [
@@ -1126,16 +4689,27 @@
     "best-buy",
     "currys",
     "samsung",
+    "apple",
+    "argos",
     "nike",
     "asos",
-    "sephora",
+    "zalando",
     "ikea",
-    "home-depot"
+    "home-depot",
+    "wayfair",
+    "west-elm",
+    "pandora",
+    "rei",
+    "adidas",
+    "gymshark",
+    "steam",
+    "playstation",
+    "xbox"
    ],
    "seoTitle": "Black Friday Deals and Promo Codes 2026",
-   "seoDescription": "Early Black Friday 2026 deals and promo codes for the US, UK, Canada and Europe, with a preparation checklist.",
-   "intro": "Black Friday rewards preparation. Browse stores that usually run the biggest sales and check each offer's terms before the rush.",
-   "body": "## How to prepare\nRecord today's prices for the things you want, set a total budget and compare the final basket total, including delivery, rather than the headline discount.\n\n## What to expect\nElectronics and home retailers tend to publish early deals, while fashion and beauty brands often release limited-time codes closer to the weekend. Offers on this page are labelled with their check date so you can tell what is fresh."
+   "seoDescription": "Early Black Friday 2026 deals and promo codes for the US, UK, Canada and Europe, with a preparation checklist to avoid fake discounts.",
+   "intro": "Browse stores that usually run the biggest Black Friday sales, plus a checklist so you compare real prices before the rush.",
+   "body": "## How to prepare\nRecord today’s prices for the things you want, set a total budget and compare the final basket including delivery rather than the headline discount.\n\n## What to expect\nElectronics and home retailers usually publish early deals, while fashion and beauty brands release limited-time codes closer to the weekend. Every offer here shows when it was last checked."
   },
   {
    "slug": "christmas",
@@ -1144,17 +4718,79 @@
    "stores": [
     "asos",
     "zalando",
-    "boots",
+    "hm",
     "sephora",
+    "boots",
+    "ulta",
+    "pandora",
+    "kay-jewelers",
+    "chewy",
+    "the-entertainer",
+    "carters",
+    "article",
     "ikea",
+    "wayfair",
     "ticketmaster",
     "expedia",
-    "chewy"
+    "booking-com",
+    "steam"
    ],
-   "seoTitle": "Christmas Deals and Promo Codes 2026",
-   "seoDescription": "Christmas 2026 gift deals and promo codes across fashion, beauty, home and travel for the US, UK, Canada and Europe.",
-   "intro": "Spread the cost of gifts by checking for codes and member prices before you pay, and note delivery cut-off dates.",
+   "seoTitle": "Christmas Deals and Gift Promo Codes 2026",
+   "seoDescription": "Christmas 2026 gift deals and promo codes across fashion, beauty, home and travel for the US, UK, Canada and Europe, with delivery cut-off tips.",
+   "intro": "Spread the cost of gifts by checking for codes and member prices before you pay, and note each store’s delivery cut-off dates.",
    "body": "## Plan around delivery dates\nLast-order dates for Christmas delivery differ by store and country, so check them first, then look for savings.\n\n## Where savings hide\nGift sets, loyalty reward days and free-delivery thresholds often beat a small percentage code. Compare the full basket before choosing."
+  },
+  {
+   "slug": "cyber-monday",
+   "name": "Cyber Monday",
+   "status": "published",
+   "stores": [
+    "best-buy",
+    "currys",
+    "samsung",
+    "apple",
+    "nordvpn",
+    "canva",
+    "hostinger",
+    "adobe",
+    "microsoft-365",
+    "steam",
+    "playstation",
+    "xbox",
+    "nintendo",
+    "epic-games",
+    "udemy",
+    "coursera"
+   ],
+   "seoTitle": "Cyber Monday Tech and Software Deals 2026",
+   "seoDescription": "Cyber Monday 2026 deals on laptops, phones, gaming and software subscriptions, with tips to spot genuine versus inflated discounts.",
+   "intro": "Cyber Monday is the day for tech, gaming and software bargains. Compare across retailers before you commit to a deal.",
+   "body": "## Tech and software focus\nLaptops, phones, monitors and subscription plans see their deepest discounts here. Check the renewal price on software before you buy.\n\n## Be quick but careful\nStock and prices change hourly. Have a shortlist ready and confirm the discount is real with a quick price-history check."
+  },
+  {
+   "slug": "back-to-school",
+   "name": "Back to School",
+   "status": "published",
+   "stores": [
+    "asos",
+    "uniqlo",
+    "hm",
+    "apple",
+    "currys",
+    "argos",
+    "best-buy",
+    "john-lewis",
+    "the-entertainer",
+    "udemy",
+    "coursera",
+    "skillshare",
+    "gymshark",
+    "adidas"
+   ],
+   "seoTitle": "Back to School Deals: Tech, Clothes and Supplies",
+   "seoDescription": "Back to school 2026 deals on laptops, clothing and stationery, plus student discounts and education pricing to save before term starts.",
+   "intro": "Save on laptops, clothing and supplies before term starts, and stack student discounts wherever a store allows it.",
+   "body": "## Student and education pricing\nMany tech brands offer education stores with year-round savings that often beat public codes.\n\n## Clothing and supplies\nBuy basics in multi-packs and time larger purchases for end-of-season sales."
   }
  ]
 }
