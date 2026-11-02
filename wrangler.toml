@@ -13,7 +13,7 @@ id = "4973ac41469d4410a08cdbea990306b1"
 # Your real domain, no trailing slash. Used for canonical URLs and the sitemap.
 SITE_URL = "https://couponbuz.pro"
 # "true" shows the clearly-labelled sample offers when the CMS is empty. Set to "false" once you add real offers.
-SHOW_DEMO = "true"
+SHOW_DEMO = "false"
 
 # SECRETS (never put these in this file). Set them with:
 #   npx wrangler pages secret put ADMIN_PASSWORD --project-name couponbuz
