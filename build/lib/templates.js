@@ -10,6 +10,15 @@ export const REGIONS = {
   US: { slug: 'us', name: 'United States', short: 'US' },
   UK: { slug: 'uk', name: 'United Kingdom', short: 'UK' },
   CA: { slug: 'canada', name: 'Canada', short: 'CA' },
+  DE: { slug: 'germany', name: 'Germany', short: 'DE' },
+  FR: { slug: 'france', name: 'France', short: 'FR' },
+  IT: { slug: 'italy', name: 'Italy', short: 'IT' },
+  NL: { slug: 'netherlands', name: 'Netherlands', short: 'NL' },
+  SE: { slug: 'sweden', name: 'Sweden', short: 'SE' },
+  FI: { slug: 'finland', name: 'Finland', short: 'FI' },
+  LT: { slug: 'lithuania', name: 'Lithuania', short: 'LT' },
+  CH: { slug: 'switzerland', name: 'Switzerland', short: 'CH' },
+  RU: { slug: 'russia', name: 'Russia', short: 'RU' },
   EU: { slug: 'europe', name: 'Europe', short: 'EU' },
 };
 export const storeUrl = (s) => `/coupons/${s.slug}/`;

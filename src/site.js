@@ -73,6 +73,15 @@ const offersJson = (list) => `<script type="application/json" id="offers-json">$
 const storeGrid = (list) => `<div class="tile-grid">${list.map((s) => storeTile(s, couponsOf(s.slug).length)).join('')}</div>`;
 const stackHtml = (list, ctx) => `<div class="stack">${list.map((c) => offerCard(c, storeBy[c.storeSlug], ctx)).join('')}</div>`;
 const pageHead = (h1, lead, extra = '') => `<section class="wrap page-head"><h1>${esc(h1)}</h1>${lead ? `<p class="lead">${esc(lead)}</p>` : ''}${extra}</section>`;
+// Varied, keyword-rich store headings for better ranking (avoids one duplicate H1 pattern on every page).
+const H1_VARIANTS = ['Promo Codes & Coupons', 'Discount Codes & Deals', 'Coupon Codes & Vouchers', 'Voucher Codes & Offers', 'Deals & Discount Codes', 'Promo Codes & Discounts'];
+function storeHeading(s) {
+  const mk = s.markets || [];
+  if (mk.includes('DE') && !mk.includes('US')) return `${s.name} Rabattcode & Gutscheine`;
+  if (mk.includes('FR') && !mk.includes('US') && !mk.includes('UK')) return `${s.name} Codes Promo & Reductions`;
+  let h = 0; for (const ch of String(s.slug || s.name)) h = (h * 31 + ch.charCodeAt(0)) % 1000003;
+  return `${s.name} ${H1_VARIANTS[h % H1_VARIANTS.length]}`;
+}
 const crumbSchema = breadcrumbSchema;
 // Per-page SEO overrides set in the CMS: social title/description/image, canonical URL, noindex, extra head code.
 const hasCanon = (o) => /^https?:\/\/\S+$/.test((o && o.canonicalUrl) || '');
@@ -124,7 +133,7 @@ for (const s of storesAll) routes.set(storeUrl(s), () => {
   const body = `${breadcrumbs(crumbs)}
 <section class="wrap store-hero">
   <img src="${esc(storeLogo(s))}" alt="${esc(s.logoAlt || s.name + ' logo')}" width="88" height="88">
-  <div><h1>${esc(s.name)} Promo Codes & Coupons (${esc(monthYear())})</h1>
+  <div><h1>${esc(storeHeading(s))} (${esc(monthYear())})</h1>
   <p class="lead">${esc(s.description)}</p>
   <div class="o-meta"><span class="pill">${list.length} offer${list.length === 1 ? '' : 's'}</span>${verified ? `<span class="pill ok">Last checked ${esc(fmtDate(verified))}</span>` : ''}${regionPillsHtml(s.markets)}</div></div>
 </section>
@@ -177,11 +186,20 @@ const REGION_TEXT = {
   US: 'Prices on US stores are usually shown before sales tax, which is added at checkout and varies by state. Free-shipping thresholds are common, so compare the final total rather than the headline discount.',
   UK: 'UK retailers usually show prices including VAT, and many call promo codes "voucher codes" or "discount codes". Check delivery charges and click-and-collect options, which can change the real saving.',
   CA: 'Canadian stores often price in Canadian dollars and add GST or provincial tax at checkout. When buying from a US store, check duties and cross-border shipping before applying a code.',
+  DE: 'German shops show prices including 19% VAT (MwSt). Look for "Rabattcode" or "Gutschein", check shipping costs and the right of withdrawal, and compare the final price including delivery.',
+  FR: 'French stores show prices including VAT (TVA). Codes promo and reductions often exclude sale items; check livraison costs and the 14-day right of withdrawal for online orders.',
+  IT: 'Italian shops show prices including IVA. Codici sconto often apply only to full-price items; check spedizione costs and the right of withdrawal before you buy.',
+  NL: 'Dutch stores show prices including BTW. Kortingscodes can exclude sale items; check verzendkosten and the 14-day return window for online purchases.',
+  SE: 'Swedish shops show prices including VAT (moms). Look for rabattkoder, check frakt costs, and note the 14-day angrerätt for distance sales.',
+  FI: 'Finnish shops show prices including VAT (ALV). Alennuskoodi offers may exclude sale items; check toimituskulut and the 14-day right to cancel.',
+  LT: 'Lithuanian shops show prices including PVM. Nuolaidos kodai can be limited to full-price items; check pristatymas costs and the 14-day right of withdrawal.',
+  CH: 'Swiss prices include VAT (MWST) but Switzerland is outside the EU, so cross-border orders may incur customs duties. Check shipping and import fees before applying a code.',
+  RU: 'Russian and CIS stores often price in rubles. Promo codes (промокод) may be region-locked; confirm delivery areas and payment methods before you check out.',
   EU: 'European shoppers often have country-specific shops with their own prices and sales, so use the shop that matches your delivery address. Prices normally include VAT, and EU distance-selling rules give you a right to withdraw from most online purchases.',
 };
 {
   const crumbs = [['Home', '/'], ['Regions', '/promo-codes/']];
-  routes.set('/promo-codes/', () => layout({ title: 'Promo Codes by Country: US, UK, Canada & Europe', description: 'Find promo codes and coupons for your country. Offers are tagged for the United States, United Kingdom, Canada and Europe.', path: '/promo-codes/', schema: [crumbSchema(crumbs)],
+  routes.set('/promo-codes/', () => layout({ title: 'Promo Codes by Country & Region', description: 'Find promo codes and coupons for your country, including the US, UK, Canada, Germany, France, Italy, Netherlands, Sweden and more.', path: '/promo-codes/', schema: [crumbSchema(crumbs)],
     body: `${breadcrumbs(crumbs)}${pageHead('Promo codes by country', 'Many codes only work in one country. Pick yours to see offers tagged for your region.')}<section class="wrap block"><div class="region-grid">${Object.entries(REGIONS).map(([k, r]) => `<a class="region" href="${regionUrl(k)}"><strong>${esc(r.name)}</strong><span>${storesAll.filter((s) => (s.markets || []).includes(k)).length} stores</span></a>`).join('')}</div></section>` }));
   for (const [k, r] of Object.entries(REGIONS)) routes.set(regionUrl(k), () => {
     const list = storesAll.filter((s) => (s.markets || []).includes(k));
