@@ -192,18 +192,16 @@ export function offerCard(c, st, ctx = 'store') {
     c.expires && left <= 3 ? `<span class="pill hot">Ends ${left <= 0 ? 'today' : 'in ' + left + ' day' + (left > 1 ? 's' : '')}</span>` : c.expires ? `<span class="pill">Ends ${esc(fmtDate(c.expires))}</span>` : '',
     ...(c.tags || []).map((t) => `<span class="pill tag">${esc(t)}</span>`),
   ].filter(Boolean).join('');
-  const lead = ctx === 'home'
-    ? `<a class="o-logo" href="${storeUrl(st)}" aria-label="${esc(st.name)} offers"><img src="${esc(storeLogo(st))}" alt="${esc(st.name)} logo" width="52" height="52" loading="lazy"></a>`
-    : `<div class="o-disc"><b>${esc(c.discount || (hasCode ? 'Code' : 'Deal'))}</b><small>${hasCode ? 'Promo code' : 'Deal'}</small></div>`;
+  const disc = c.discount || (hasCode ? 'Code' : 'Deal');
   const cta = hasCode
     ? `<button class="cta code" type="button" data-reveal="${esc(c.id)}"><span class="lbl">Show code</span><span class="peek" aria-hidden="true">${esc(mask(c.code))}</span></button>`
     : `<a class="cta deal" href="${esc(dest)}" target="_blank" rel="sponsored nofollow noopener" data-deal>Get deal</a>`;
   return `<article class="offer" id="o-${esc(c.id)}" data-markets="${esc((c.markets || []).join(','))}" data-type="${hasCode ? 'code' : 'deal'}">
-  ${lead}
+  <div class="o-disc"><b>${esc(disc)}</b><small>${hasCode ? 'Code' : 'Deal'}</small></div>
+  <a class="o-store" href="${storeUrl(st)}" title="${esc(st.name)} offers"><img class="o-logo" src="${esc(storeLogo(st))}" alt="${esc(st.name)} logo" width="44" height="44" loading="lazy"><span class="o-name">${esc(st.name)}</span></a>
   <div class="o-body">
-    ${ctx === 'home' ? `<a class="o-store" href="${storeUrl(st)}">${esc(st.name)}</a>` : ''}
-    <h3>${ctx === 'home' && c.discount ? `<b>${esc(c.discount)}</b> ` : ''}${esc(c.title)}</h3>
     <div class="o-meta">${pills}${regionPills(c.markets)}</div>
+    <h3>${esc(c.title)}</h3>
     ${c.description ? `<p>${esc(c.description)}</p>` : ''}
     ${c.terms ? `<details><summary>Terms</summary><p>${esc(c.terms)}</p></details>` : ''}
   </div>
