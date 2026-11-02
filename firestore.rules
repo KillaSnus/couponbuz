@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Only your admin account can write. The check uses the account's UID (not the email), so nobody
+    // can win it by registering the same email first.
+    // Replace ADMIN_UID_HERE: Firebase console → Authentication → Users → copy the "User UID" column.
+    function isAdmin() {
+      return request.auth != null && request.auth.uid in ['ADMIN_UID_HERE'];
+    }
+
+    // Public site content: anyone can read (the build reads it), only the admin can write.
+    match /{collection}/{docId} {
+      allow read: if collection in ['stores','coupons','categories','posts','pages','collections','redirects','settings','media'];
+      allow write: if isAdmin();
+    }
+
+    // Private collections: admin only. 'submissions' is written by the server function (service account
+    // bypasses rules), so the public can never read or write it directly.
+    match /activity/{docId} {
+      allow read, write: if isAdmin();
+    }
+    match /submissions/{docId} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
