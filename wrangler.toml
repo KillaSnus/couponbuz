@@ -7,7 +7,7 @@ pages_build_output_dir = "public"
 # CMS storage. Content, settings, submissions and uploaded images live here.
 [[kv_namespaces]]
 binding = "CMS"
-id = "77449074c2e7d4928c1313d99418c62f8dd6bdcc"
+id = "4973ac41469d4410a08cdbea990306b1"
 
 [vars]
 # Your real domain, no trailing slash. Used for canonical URLs and the sitemap.
