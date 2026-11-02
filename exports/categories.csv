@@ -1,0 +1,19 @@
+name,slug,icon,description,status
+Fashion & Apparel,fashion,👟,"Clothing, shoes and accessories from high-street names and online fashion retailers. Sales move fast, so check expiry dates before checkout.",published
+Electronics & Tech,electronics,💻,"Phones, laptops, TVs and gadgets. Big-ticket items carry the biggest savings but the strictest exclusions, so read each offer terms.",published
+Health & Beauty,health-beauty,💄,"Makeup, skincare, haircare and wellness. Beauty codes often stack with loyalty points, free gifts and member-only sales.",published
+Home & Garden,home-garden,🏡,"Furniture, decor, DIY and garden essentials. Seasonal sales and clearance events bring the deepest discounts here.",published
+Travel & Hotels,travel,✈️,"Flights, hotels, holiday rentals and car hire. Booking windows and member rates often beat the headline code.",published
+Food Delivery,food-delivery,🍔,Restaurant delivery and takeaway apps. First-order codes and free-delivery thresholds are where the real savings sit.,published
+Groceries & Supermarkets,groceries,🛒,"Supermarket codes, delivery passes and cashback on weekly shops. Compare the final basket, not just the headline percentage.",published
+Software & SaaS,software,🧩,"VPNs, hosting, design and productivity tools. Most discounts apply to the first term only, so note the renewal price.",published
+Sports & Outdoors,sports-outdoors,🏃,"Running, training and outdoor gear. Student and member programmes often beat public promo codes.",published
+Gaming & Consoles,gaming,🎮,"Games, consoles, subscriptions and in-game credit. Digital store sales rotate weekly, so wishlist before you buy.",published
+Baby & Kids,baby-kids,🍼,"Nursery, pushchairs, kids clothing and toys. Bundle offers and new-customer codes add up for growing families.",published
+Furniture & Decor,furniture,🛋️,"Sofas, beds, storage and home decor. Lead times and clearance timing matter as much as the discount.",published
+Pets,pets,🐾,"Pet food, supplies and pharmacy items. Subscribe-and-save usually beats a one-off coupon on repeat buys.",published
+Automotive,automotive,🚗,"Car parts, servicing, tyres and accessories. Seasonal fitting offers and rebate cards are common here.",published
+DIY & Tools,diy-tools,🔨,"Tools, hardware, paint and building supplies. Trade accounts and bulk pricing often beat public codes.",published
+Jewellery & Watches,jewelry-watches,💎,"Rings, necklaces, watches and gifts. Engraving and gift-wrap offers can be as valuable as the discount.",published
+Tickets & Entertainment,entertainment,🎟️,"Concerts, theatre, cinema and events. Presales and member windows matter more than coupon codes.",published
+Courses & Learning,education,🎓,"Online courses, e-learning and skills platforms. Frequent sitewide sales make timing your purchase worthwhile.",published
