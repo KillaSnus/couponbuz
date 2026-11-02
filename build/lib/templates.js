@@ -17,7 +17,8 @@ export const catUrl = (c) => `/categories/${c.slug}-coupons/`;
 export const regionUrl = (r) => `/promo-codes/${REGIONS[r].slug}/`;
 export const dealUrl = (d) => `/deals/${d.slug}/`;
 export const postUrl = (p) => `/guides/${p.slug}/`;
-export const storeLogo = (s) => s.logo || `/img/stores/${s.slug}-coupons.svg`;
+const _validLogo = (l) => typeof l === 'string' && (/^https?:\/\//i.test(l) || l.startsWith('/'));
+export const storeLogo = (s) => (_validLogo(s.logo) ? s.logo : `/img/stores/${s.slug}-coupons.svg`);
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 export const monthYear = () => `${MONTHS[NOW.getMonth()]} ${NOW.getFullYear()}`;
