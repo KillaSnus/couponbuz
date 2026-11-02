@@ -17,7 +17,7 @@ export function modal(html, onMount) {
   return { el: m, close };
 }
 
-export const IS_CONFIGURED = true; // backend is the Netlify Function /api/cms (see netlify/functions/cms.mjs)
+export const IS_CONFIGURED = true; // backend is the Cloudflare Pages Function /api/cms (see functions/api/cms.js)
 export const DEMO = !!(window.__DEMO__ || new URLSearchParams(location.search).has('demo')) && ['localhost', '127.0.0.1', ''].includes(location.hostname);
 
 const tsISO = (v) => (v && typeof v === 'object' && typeof v.toDate === 'function' ? v.toDate().toISOString() : v);
@@ -29,19 +29,13 @@ const TOKEN_KEY = 'cb_cms_token';
 const getTok = () => { try { return sessionStorage.getItem(TOKEN_KEY) || ''; } catch { return ''; } };
 const setTok = (t) => { try { t ? sessionStorage.setItem(TOKEN_KEY, t) : sessionStorage.removeItem(TOKEN_KEY); } catch {} };
 
-// Saves are published automatically ~20s after the last change (Netlify rebuild via the server-side build hook).
-let pubTimer = null, pubDirty = false;
-export function publishNow(keepalive) {
-  pubDirty = false; clearTimeout(pubTimer);
-  return fetch(API, { method: 'POST', keepalive: !!keepalive, headers: { 'content-type': 'application/json', authorization: 'Bearer ' + getTok() }, body: JSON.stringify({ op: 'publish' }) }).then((r) => r.json()).catch(() => ({ triggered: false }));
-}
-function markDirty() { pubDirty = true; clearTimeout(pubTimer); pubTimer = setTimeout(() => publishNow(), 20000); }
-addEventListener('pagehide', () => { if (pubDirty && getTok()) publishNow(true); });
+// Content saved here is live immediately: the public site renders from the same storage (no rebuild step).
+const markDirty = () => {};
 
 async function call(body) {
   let res;
   try { res = await fetch(API, { method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + getTok() }, body: JSON.stringify(body) }); }
-  catch { throw new Error('Cannot reach the CMS server. Check your connection and that the site is deployed on Netlify.'); }
+  catch { throw new Error('Cannot reach the CMS server. Check your connection and that the site is deployed on Cloudflare Pages.'); }
   let j = {}; try { j = await res.json(); } catch {}
   if (res.status === 401 && j.code === 'auth') { setTok(''); if (body.op !== 'login') setTimeout(() => location.reload(), 600); }
   if (!res.ok) throw new Error(j.error || `Server error ${res.status}`);
@@ -105,7 +99,7 @@ export let currentUser = null;
 export const setUser = (u) => { currentUser = u; };
 
 export async function logActivity(action, col, title) {
-  try { await backend.set('activity', `${Date.now()}-${Math.random().toString(36).slice(2, 6)}`, { action, col, title: String(title || '').slice(0, 120), by: currentUser?.email || '', at: new Date().toISOString() }); } catch (e) {}
+  try { await backend.set('activity', `${Date.now()}-${Math.random().toString(36).slice(2, 6)}`, { action, col, title: String(title || '').slice(0, 120), by: currentUser?.email || '', at: new Date().toISOString() }); } catch {}
 }
 
 // ---------- csv ----------
@@ -123,4 +117,4 @@ export function parseCSV(text) {
   return rows;
 }
 export const toCSV = (rows) => rows.map((r) => r.map((v) => { v = String(v ?? ''); return /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v; }).join(',')).join('\n');
-export function download(name, text, type = 'text/plain') { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); }
+export function download(name, text, type = 'text/plain') { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1500); }
