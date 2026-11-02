@@ -20,23 +20,3 @@ SHOW_DEMO = "true"
 #   ADMIN_EMAIL        optional: only this email can sign in
 #   SESSION_SECRET     optional: long random text used to sign login tokens
 #   ANTHROPIC_API_KEY  optional: turns on the AI answers in the chat bubble
-{
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "WORKER-NAME",
-  "main": "src/index.ts",
-  "compatibility_date": "2025-02-04",
-  "observability": {
-    "enabled": true
-  },
-
-  // Add this to your wrangler.jsonc
-  "kv_namespaces": [
-    {
-      "binding": "KV",
-      "id": "1b0b2d5023414b1893240af79ebde148",
-      
-      // Optional: preview_id used when running `wrangler dev` for local dev
-      "preview_id": "<ID_OF_PREVIEW_KV_NAMESPACE_FOR_LOCAL_DEVELOPMENT>"
-    }
-  ]
-}
