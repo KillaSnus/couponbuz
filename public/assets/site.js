@@ -171,3 +171,32 @@
     }
   }
 })();
+
+(function(){'use strict';var lastData=null;
+async function syncLiveData(){
+  try{
+    var res=await fetch('/api/cms?public=1',{headers:{'Accept':'application/json'},cache:'no-store'});
+    if(!res.ok)return;var data=await res.json();if(!data||!data.data)return;
+    var dataStr=JSON.stringify(data.data);
+    if(lastData===dataStr)return;lastData=dataStr;
+    var d=data.data;
+    if(d.settings&&d.settings.theme&&d.settings.theme.announcement){
+      var ann=d.settings.theme.announcement;
+      var bar=document.querySelector('.announcement-bar')||document.querySelector('aside[aria-label="Announcement"]');
+      if(bar&&ann.text){var ts=bar.querySelector('span')||bar;ts.textContent=ann.text;bar.hidden=!ann.enabled;}
+    }
+    if(d.settings&&d.settings.site&&d.settings.site.siteName){
+      var logo=document.querySelector('.logo-text')||document.querySelector('header strong');
+      if(logo)logo.textContent=d.settings.site.siteName;
+    }
+    if(d.coupons&&Array.isArray(d.coupons)){
+      window.__LIVE_COUPONS=d.coupons;
+      var cb=document.querySelector('[data-offer-count]');
+      if(cb)cb.textContent=d.coupons.length+' offer'+(d.coupons.length>1?'s':'');
+    }
+    console.log('⚡ CouponBuz: Live content synced');
+  }catch(e){console.warn('CouponBuz sync:',e.message);}
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncLiveData);}else{syncLiveData();}
+setInterval(syncLiveData,5000);})();
+
