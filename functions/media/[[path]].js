@@ -6,8 +6,11 @@ export async function onRequestGet({ params, env }) {
   if (!env.CMS || !/^uploads\/[a-z0-9._-]+$/.test(path)) return new Response('Not found', { status: 404 });
   const { value, metadata } = await env.CMS.getWithMetadata('media:' + path, 'arrayBuffer');
   if (!value) return new Response('Not found', { status: 404 });
+
   const type = metadata && IMAGE_TYPES[metadata.type] ? metadata.type : 'application/octet-stream';
-  return new Response(value, {
+  const body = value instanceof ArrayBuffer ? new Uint8Array(value) : value;
+
+  return new Response(body, {
     headers: {
       'content-type': type,
       'cache-control': 'public, max-age=31536000, immutable',
