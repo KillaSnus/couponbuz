@@ -20,8 +20,8 @@ export function fontLink(font) {
 
 export function themeCss(t) {
   const f = FONTS[t.font] || FONTS.inter;
-  const r = Math.min(28, Math.max(0, Number(t.radius) || 14));
-  const light = `--primary:${hex(t.primary, '#4f46e5')};--primary-dark:${hex(t.primaryDark, '#3730a3')};--accent:${hex(t.accent, '#ff6b35')};--bg:${hex(t.bg, '#f7f7fb')};--surface:${hex(t.surface, '#ffffff')};--ink:${hex(t.ink, '#101828')};--muted:${hex(t.muted, '#5b6478')};--link:${hex(t.primary, '#4f46e5')};--radius:${r}px;--font:${f.css};`;
+  const r = Math.min(28, Math.max(0, Number(t.radius) || 16));
+  const light = `--primary:${hex(t.primary, '#4f46e5')};--primary-dark:${hex(t.primaryDark, '#3730a3')};--accent:${hex(t.accent, '#c2410c')};--bg:${hex(t.bg, '#f8fafc')};--surface:${hex(t.surface, '#ffffff')};--ink:${hex(t.ink, '#0f172a')};--muted:${hex(t.muted, '#5b6478')};--link:${hex(t.primary, '#4f46e5')};--radius:${r}px;--font:${f.css};`;
   const dark = `--bg:#0c1020;--surface:#151a2e;--ink:#eef1f8;--muted:#a2abc0;--link:color-mix(in srgb,${hex(t.primary, '#4f46e5')} 55%,#fff);`;
   let css = `:root{${light}}`;
   if (t.darkMode === 'dark') css += `:root{${dark}}`;

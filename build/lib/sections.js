@@ -35,7 +35,7 @@ export function renderSection(sec, x) {
       break;
     }
     case 'categories':
-      html = `<section class="wrap block">${head(sec, ['All categories', '/categories/'])}<div class="cat-grid">${x.cats.map((c) => `<a class="cat" href="${catUrl(c)}"><span class="ico">${esc(c.icon || '🏷️')}</span><strong>${esc(c.name)}</strong></a>`).join('')}</div></section>`;
+      html = `<section class="wrap block">${head(sec, ['All categories', '/categories/'])}<div class="cat-grid">${x.cats.map((c) => { const n = x.stores.filter((s) => s.category === c.slug).length; return `<a class="cat" href="${catUrl(c)}"><span class="ico">${esc(c.icon || '🏷️')}</span><span class="cat-txt"><strong>${esc(c.name)}</strong><small>${n} store${n === 1 ? '' : 's'}</small></span></a>`; }).join('')}</div></section>`;
       break;
     case 'regions':
       html = `<section class="wrap block">${head(sec)}<div class="region-grid">${Object.entries(REGIONS).map(([k, r]) => `<a class="region" href="${regionUrl(k)}"><strong>${esc(r.name)}</strong><span>${x.stores.filter((s) => (s.markets || []).includes(k)).length} stores</span></a>`).join('')}</div></section>`;
