@@ -75,7 +75,7 @@ async function demoBackend() {
   put('submissions', 'demo-sub', { store: 'Nike', title: 'Example visitor submission', code: '', description: 'Demo record. Delete me.', url: '', markets: ['US'], status: 'pending', type: 'deal', createdAt: new Date().toISOString() });
   return {
     mode: 'demo',
-    onAuth: (cb) => cb({ email: 'demo@couponbuz.com' }),
+    onAuth: (cb) => cb({ email: 'demo@biorals.com' }),
     signIn: async () => {}, signOut: async () => location.reload(),
     async list(col) { return Object.entries(db[col] || {}).map(([id, d]) => ({ id, ...d })); },
     async get(col, id) { const d = (db[col] || {})[id]; return d ? { id, ...d } : null; },

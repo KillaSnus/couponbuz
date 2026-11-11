@@ -2,11 +2,11 @@
 export default {
  "settings": {
   "site": {
-   "siteName": "CouponBuz",
+   "siteName": "Biorals",
    "tagline": "Promo codes and deals, checked before you shop",
-   "url": "https://couponbuz.com",
-   "email": "hello@couponbuz.com",
-   "disclosure": "CouponBuz may earn a commission when you use a link on this site to buy something. This never changes the price you pay.",
+   "url": "https://biorals.com",
+   "email": "hello@biorals.com",
+   "disclosure": "Biorals may earn a commission when you use a link on this site to buy something. This never changes the price you pay.",
    "social": {
     "twitter": "",
     "facebook": "",
@@ -233,7 +233,7 @@ export default {
     {
      "type": "howitworks",
      "enabled": true,
-     "title": "How CouponBuz works",
+     "title": "How Biorals works",
      "subtitle": ""
     },
     {
@@ -249,8 +249,8 @@ export default {
      "title": "Frequently asked questions",
      "items": [
       {
-       "q": "Are the promo codes on CouponBuz free to use?",
-       "a": "Yes. CouponBuz is free. We may earn a commission when you buy through a link, and it never changes the price you pay."
+       "q": "Are the promo codes on Biorals free to use?",
+       "a": "Yes. Biorals is free. We may earn a commission when you buy through a link, and it never changes the price you pay."
       },
       {
        "q": "Why did my promo code not work?",
@@ -294,9 +294,9 @@ export default {
   "bot": {
    "enabled": true,
    "name": "Buzz",
-   "greeting": "Hi! I can help you find offers or explain how CouponBuz works. What are you shopping for?",
+   "greeting": "Hi! I can help you find offers or explain how Biorals works. What are you shopping for?",
    "color": "",
-   "contactEmail": "hello@couponbuz.com",
+   "contactEmail": "hello@biorals.com",
    "instructions": "Keep answers short and friendly. Never invent codes or discounts.",
    "quickReplies": [
     "How do I use a code?",
@@ -320,7 +320,7 @@ export default {
      "k": "region country uk us canada europe eu"
     },
     {
-     "q": "How does CouponBuz make money",
+     "q": "How does Biorals make money",
      "a": "We may earn a commission when you buy through our links. It does not change your price. Read the full explanation on our How we make money page.",
      "k": "money commission affiliate free"
     }
@@ -4292,7 +4292,7 @@ export default {
    "slug": "how-to-tell-if-a-promo-code-will-work",
    "title": "How to Tell If a Promo Code Will Work Before You Use It",
    "excerpt": "Five quick checks that save you from dead codes, hidden exclusions and surprise renewal prices.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-10-01",
    "status": "published",
    "image": "",
@@ -4304,7 +4304,7 @@ export default {
    "slug": "best-time-to-buy-sales-calendar",
    "title": "The Best Time to Buy Almost Anything: A Sales Calendar",
    "excerpt": "A month-by-month guide to when TVs, mattresses, fashion and flights are cheapest.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-09-22",
    "status": "published",
    "image": "",
@@ -4316,7 +4316,7 @@ export default {
    "slug": "how-to-stack-coupons-cashback-loyalty",
    "title": "How to Stack Coupons, Cashback and Loyalty Points",
    "excerpt": "Layer multiple savings methods legally without breaking a store rules.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-09-15",
    "status": "published",
    "image": "",
@@ -4328,7 +4328,7 @@ export default {
    "slug": "student-discount-guide",
    "title": "Student Discounts: Every Place That Gives You Money Off",
    "excerpt": "Verify your student status once and unlock year-round discounts on tech, fashion and food.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-09-08",
    "status": "published",
    "image": "",
@@ -4340,7 +4340,7 @@ export default {
    "slug": "black-friday-2026-preparation-guide",
    "title": "Black Friday 2026: How to Prepare and Avoid Fake Deals",
    "excerpt": "A practical checklist to spot inflated discounts and buy only what you actually need.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-10-29",
    "status": "published",
    "image": "",
@@ -4352,7 +4352,7 @@ export default {
    "slug": "cyber-monday-vs-black-friday",
    "title": "Cyber Monday vs Black Friday: Which Has Better Deals?",
    "excerpt": "Where each event wins, and how to shop both without overpaying.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-10-26",
    "status": "published",
    "image": "",
@@ -4364,7 +4364,7 @@ export default {
    "slug": "how-cashback-sites-work",
    "title": "How Cashback Sites Really Work (And When They Beat Coupons)",
    "excerpt": "Understand tracking, payout windows and why cashback sometimes fails.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-09-29",
    "status": "published",
    "image": "",
@@ -4376,7 +4376,7 @@ export default {
    "slug": "free-delivery-codes-guide",
    "title": "Free Delivery Codes: How to Never Pay for Shipping Again",
    "excerpt": "Thresholds, memberships and codes that wipe out delivery fees.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-09-19",
    "status": "published",
    "image": "",
@@ -4388,7 +4388,7 @@ export default {
    "slug": "how-to-spot-a-fake-discount",
    "title": "How to Spot a Fake Discount (and Price-Anchoring Tricks)",
    "excerpt": "The psychology retailers use to make a price look lower than it is.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-09-11",
    "status": "published",
    "image": "",
@@ -4400,7 +4400,7 @@ export default {
    "slug": "do-coupon-codes-work-on-sale-items",
    "title": "Do Coupon Codes Actually Work on Sale Items?",
    "excerpt": "Why most codes exclude sale stock, and how to find ones that do not.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-09-02",
    "status": "published",
    "image": "",
@@ -4412,7 +4412,7 @@ export default {
    "slug": "newsletter-only-discount-codes",
    "title": "Newsletter-Only Discount Codes: How to Get Them Fast",
    "excerpt": "The signup codes most shoppers never see, and how to use them well.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-08-28",
    "status": "published",
    "image": "",
@@ -4424,7 +4424,7 @@ export default {
    "slug": "abandoned-cart-discount-emails",
    "title": "Abandoned Cart Emails: How to Trigger a Discount",
    "excerpt": "A gentle way to nudge a better price on something you nearly bought.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-08-21",
    "status": "published",
    "image": "",
@@ -4436,7 +4436,7 @@ export default {
    "slug": "browser-extensions-find-coupon-codes",
    "title": "Browser Extensions That Find Working Codes (Safely)",
    "excerpt": "How coupon extensions work, what they track and when to disable them.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-08-14",
    "status": "published",
    "image": "",
@@ -4448,7 +4448,7 @@ export default {
    "slug": "price-tracking-tools-guide",
    "title": "Price Tracking Tools: Buy at the Real Lowest Price",
    "excerpt": "Set alerts and watch history so you buy on the dip, not the spike.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-08-07",
    "status": "published",
    "image": "",
@@ -4460,7 +4460,7 @@ export default {
    "slug": "boxing-day-january-sales-guide",
    "title": "Boxing Day and January Sales: A Shoppers Guide",
    "excerpt": "Where the deepest post-Christmas discounts really are.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-08-01",
    "status": "published",
    "image": "",
@@ -4472,7 +4472,7 @@ export default {
    "slug": "best-deals-flights-hotels",
    "title": "How to Get the Best Deals on Flights and Hotels",
    "excerpt": "Booking windows, flexible dates and member rates that cut travel costs.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-07-24",
    "status": "published",
    "image": "",
@@ -4484,7 +4484,7 @@ export default {
    "slug": "membership-vs-coupon-worth-it",
    "title": "Membership vs Coupon: Is a Paid Subscription Worth It?",
    "excerpt": "Run the break-even maths before you pay for a loyalty or delivery plan.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-07-17",
    "status": "published",
    "image": "",
@@ -4496,7 +4496,7 @@ export default {
    "slug": "price-matching-save-more",
    "title": "How to Use Competitor Price Matching to Save More",
    "excerpt": "Make retailers honour a lower price elsewhere, without a code.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-07-10",
    "status": "published",
    "image": "",
@@ -4508,7 +4508,7 @@ export default {
    "slug": "first-order-discounts-list",
    "title": "First-Order Discounts: The Complete New-Customer Guide",
    "excerpt": "How to claim welcome offers without creating clutter or missing expiry.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-07-03",
    "status": "published",
    "image": "",
@@ -4520,7 +4520,7 @@ export default {
    "slug": "cancel-subscriptions-avoid-renewal-jumps",
    "title": "How to Cancel Subscriptions and Avoid Renewal Jumps",
    "excerpt": "Stop paying full price when a cheap first year quietly renews.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-06-26",
    "status": "published",
    "image": "",
@@ -4532,7 +4532,7 @@ export default {
    "slug": "gift-card-discounts-guide",
    "title": "Gift Card Discounts: Where to Buy Them for Less",
    "excerpt": "Pay less than face value on cards you will actually spend.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-06-19",
    "status": "published",
    "image": "",
@@ -4544,7 +4544,7 @@ export default {
    "slug": "back-to-school-shopping-save",
    "title": "Back-to-School Shopping: Save on Tech, Clothes and Supplies",
    "excerpt": "A term-start checklist that spreads cost without overspending.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-06-12",
    "status": "published",
    "image": "",
@@ -4556,7 +4556,7 @@ export default {
    "slug": "amazon-prime-day-real-savings",
    "title": "Amazon Prime Day: How to Get Real Savings",
    "excerpt": "Which categories actually drop, and how to avoid the noise.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-06-05",
    "status": "published",
    "image": "",
@@ -4568,7 +4568,7 @@ export default {
    "slug": "how-to-complain-get-refund",
    "title": "How to Complain and Get a Refund: Your Consumer Rights",
    "excerpt": "A calm, step-by-step way to resolve a bad purchase.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-05-29",
    "status": "published",
    "image": "",
@@ -4580,7 +4580,7 @@ export default {
    "slug": "30-day-rule-time-big-purchases",
    "title": "The 30-Day Rule: How to Time Big Purchases",
    "excerpt": "A simple waiting rule that stops impulse buys and catches real discounts.",
-   "author": "CouponBuz Team",
+   "author": "Biorals Team",
    "date": "2026-05-22",
    "status": "published",
    "image": "",
@@ -4592,53 +4592,53 @@ export default {
  "pages": [
   {
    "slug": "about",
-   "title": "About CouponBuz",
+   "title": "About Biorals",
    "status": "published",
-   "seoDescription": "CouponBuz is an independent promo code and deals site for shoppers in the US, UK, Canada and Europe.",
-   "body": "CouponBuz helps shoppers in the US, UK, Canada and Europe find promo codes and deals without trawling through expired offers.\n\n## What we do\nWe list offers from stores across fashion, electronics, travel, software, food delivery and more. Each listing shows its terms, its region and when it was last checked.\n\n## What we do not do\nWe do not sell products and we never ask for payment details. When you click through to a store, you buy directly from that store.\n\n## How we keep listings useful\nExpired offers are removed, and sample listings are clearly labelled. If you spot something wrong, [contact us](/contact/) and we will review it.\n\n## How we are funded\nWe may earn a commission when you buy through our links. Read more on our [affiliate disclosure page](/how-we-make-money/)."
+   "seoDescription": "Biorals is an independent promo code and deals site for shoppers in the US, UK, Canada and Europe.",
+   "body": "Biorals helps shoppers in the US, UK, Canada and Europe find promo codes and deals without trawling through expired offers.\n\n## What we do\nWe list offers from stores across fashion, electronics, travel, software, food delivery and more. Each listing shows its terms, its region and when it was last checked.\n\n## What we do not do\nWe do not sell products and we never ask for payment details. When you click through to a store, you buy directly from that store.\n\n## How we keep listings useful\nExpired offers are removed, and sample listings are clearly labelled. If you spot something wrong, [contact us](/contact/) and we will review it.\n\n## How we are funded\nWe may earn a commission when you buy through our links. Read more on our [affiliate disclosure page](/how-we-make-money/)."
   },
   {
    "slug": "how-we-verify",
    "title": "How We Check Offers",
    "status": "published",
-   "seoDescription": "How CouponBuz reviews, dates and removes promo codes so listings stay accurate.",
+   "seoDescription": "How Biorals reviews, dates and removes promo codes so listings stay accurate.",
    "body": "A code is only useful if it works, so we keep a simple process for every listing.\n\n## Review\nEach offer is added with its discount, terms, region and expiry date taken from the retailer or its affiliate programme.\n\n## Date stamp\nWe record when an offer was last checked. Offers without a recent check are marked and are removed if we cannot confirm them.\n\n## Removal\nOffers past their expiry date disappear from the site on the next update. Reader reports of failed codes move an offer up the review queue.\n\n## Limits\nRetailers can change or end promotions at any time, and some codes depend on your account or basket. We cannot guarantee that every code works for every customer."
   },
   {
    "slug": "how-we-make-money",
-   "title": "How CouponBuz Makes Money",
+   "title": "How Biorals Makes Money",
    "status": "published",
-   "seoDescription": "CouponBuz earns commission from affiliate links. This page explains how that works and what it means for you.",
-   "body": "CouponBuz is free to use. We earn money in the following ways.\n\n## Affiliate commissions\nMany links on this site are affiliate links. If you click one and make a purchase, the retailer may pay us a commission. The price you pay does not change.\n\n## Editorial independence\nCommission does not decide which offers we publish or how we describe them. We list offers because they are useful to shoppers, and we label sample content clearly.\n\n## Advertising\nWe may display advertising in future. Any sponsored placement will be labelled as such."
+   "seoDescription": "Biorals earns commission from affiliate links. This page explains how that works and what it means for you.",
+   "body": "Biorals is free to use. We earn money in the following ways.\n\n## Affiliate commissions\nMany links on this site are affiliate links. If you click one and make a purchase, the retailer may pay us a commission. The price you pay does not change.\n\n## Editorial independence\nCommission does not decide which offers we publish or how we describe them. We list offers because they are useful to shoppers, and we label sample content clearly.\n\n## Advertising\nWe may display advertising in future. Any sponsored placement will be labelled as such."
   },
   {
    "slug": "contact",
    "title": "Contact Us",
    "status": "published",
-   "seoDescription": "Contact CouponBuz to report an expired code, suggest a store or ask a question.",
+   "seoDescription": "Contact Biorals to report an expired code, suggest a store or ask a question.",
    "body": "We read every message.\n\n## Report a problem\nIf a code failed or an offer is out of date, tell us the store, the code and what happened at checkout.\n\n## Suggest a store\nTell us which retailer you would like to see and which country you shop from.\n\n## Partnerships\nRetailers and affiliate managers can reach us at the email address in the footer of this site."
   },
   {
    "slug": "privacy",
    "title": "Privacy Policy",
    "status": "published",
-   "seoDescription": "How CouponBuz handles visitor data, cookies and analytics.",
-   "body": "This policy explains what information CouponBuz collects and why. It is a starting template; have it reviewed by a legal professional before relying on it.\n\n## Information we collect\nWe collect basic usage data such as pages viewed and device type through analytics tools, if enabled. We do not require you to create an account to browse.\n\n## Cookies\nWe use cookies for site functions and analytics. Where required by law, such as in the EU and UK, we ask for your consent before setting non-essential cookies.\n\n## Offers you submit\nIf you send us an offer through the submit form, we store what you enter (store, code, description and an optional email address) so that we can review it. Submissions are not published until a person has checked them. Tell us if you would like a submission deleted.\n\n## Third parties\nWhen you click an affiliate link, the retailer and its tracking partners may set their own cookies. Their policies apply on their sites.\n\n## Your rights\nDepending on where you live, you may have rights to access, correct or delete your data. Contact us to make a request.\n\n## Changes\nWe may update this policy and will show the date of the latest change on this page."
+   "seoDescription": "How Biorals handles visitor data, cookies and analytics.",
+   "body": "This policy explains what information Biorals collects and why. It is a starting template; have it reviewed by a legal professional before relying on it.\n\n## Information we collect\nWe collect basic usage data such as pages viewed and device type through analytics tools, if enabled. We do not require you to create an account to browse.\n\n## Cookies\nWe use cookies for site functions and analytics. Where required by law, such as in the EU and UK, we ask for your consent before setting non-essential cookies.\n\n## Offers you submit\nIf you send us an offer through the submit form, we store what you enter (store, code, description and an optional email address) so that we can review it. Submissions are not published until a person has checked them. Tell us if you would like a submission deleted.\n\n## Third parties\nWhen you click an affiliate link, the retailer and its tracking partners may set their own cookies. Their policies apply on their sites.\n\n## Your rights\nDepending on where you live, you may have rights to access, correct or delete your data. Contact us to make a request.\n\n## Changes\nWe may update this policy and will show the date of the latest change on this page."
   },
   {
    "slug": "terms",
    "title": "Terms of Use",
    "status": "published",
-   "seoDescription": "Terms of use for CouponBuz: how you may use the site, how third-party offers and links work, and the limits of our liability.",
-   "body": "By using CouponBuz you agree to these terms. This is a starting template; have it reviewed by a legal professional before relying on it.\n\n## Use of the site\nThe site is provided for personal, non-commercial use. Do not copy or republish listings in bulk.\n\n## Offers\nOffers are provided by third-party retailers and may change or end at any time. We do not guarantee that any offer will apply to your order.\n\n## Links\nThe site links to external websites we do not control. We are not responsible for their content or practices.\n\n## Liability\nTo the extent permitted by law, CouponBuz is not liable for losses arising from your use of the site or from purchases made with third parties."
+   "seoDescription": "Terms of use for Biorals: how you may use the site, how third-party offers and links work, and the limits of our liability.",
+   "body": "By using Biorals you agree to these terms. This is a starting template; have it reviewed by a legal professional before relying on it.\n\n## Use of the site\nThe site is provided for personal, non-commercial use. Do not copy or republish listings in bulk.\n\n## Offers\nOffers are provided by third-party retailers and may change or end at any time. We do not guarantee that any offer will apply to your order.\n\n## Links\nThe site links to external websites we do not control. We are not responsible for their content or practices.\n\n## Liability\nTo the extent permitted by law, Biorals is not liable for losses arising from your use of the site or from purchases made with third parties."
   },
   {
    "slug": "faq",
    "title": "Coupon FAQ: Frequently Asked Questions",
    "status": "published",
    "seoTitle": "Coupon FAQ: Frequently Asked Questions",
-   "seoDescription": "Answers to common questions about promo codes, voucher expiry, regions, cashback and how CouponBuz checks offers before publishing.",
-   "body": "## Are the codes free to use?\nYes. CouponBuz is free. We may earn a commission when you buy through a link, and it never changes the price you pay.\n\n## Why did a code not work?\nCodes can expire, need a minimum spend, or apply only to new customers or one country. Check the terms line on each offer.\n\n## Which countries are covered?\nOffers are tagged for the US, UK, Canada and Europe, and each offer shows the regions it is valid in.\n\n## How often are offers checked?\nEvery offer shows when it was last checked, and expired offers are removed when the site is updated. See [how we verify offers](/how-we-verify/).\n\n## Can I submit a code?\nYes. Use the [submit page](/submit-coupon/) and a person reviews every submission before anything is published."
+   "seoDescription": "Answers to common questions about promo codes, voucher expiry, regions, cashback and how Biorals checks offers before publishing.",
+   "body": "## Are the codes free to use?\nYes. Biorals is free. We may earn a commission when you buy through a link, and it never changes the price you pay.\n\n## Why did a code not work?\nCodes can expire, need a minimum spend, or apply only to new customers or one country. Check the terms line on each offer.\n\n## Which countries are covered?\nOffers are tagged for the US, UK, Canada and Europe, and each offer shows the regions it is valid in.\n\n## How often are offers checked?\nEvery offer shows when it was last checked, and expired offers are removed when the site is updated. See [how we verify offers](/how-we-verify/).\n\n## Can I submit a code?\nYes. Use the [submit page](/submit-coupon/) and a person reviews every submission before anything is published."
   },
   {
    "slug": "editorial-policy",
@@ -4677,8 +4677,8 @@ export default {
    "title": "Affiliate Disclosure",
    "status": "published",
    "seoTitle": "Affiliate Disclosure",
-   "seoDescription": "Our affiliate disclosure explains how CouponBuz earns commission on some links and how that affects the price you pay and what we list.",
-   "body": "Transparency matters. This page explains our commercial relationships.\n\n## How we earn\nCouponBuz may earn a commission when you click a link and make a purchase. This never changes the price you pay.\n\n## What it does not affect\nCommission does not change which offers we list or how we test them. Editorial choices stay independent.\n\n## Our promise\nWe label sample and unverified offers clearly and remove offers that stop working. Read our [editorial policy](/editorial-policy/) for more."
+   "seoDescription": "Our affiliate disclosure explains how Biorals earns commission on some links and how that affects the price you pay and what we list.",
+   "body": "Transparency matters. This page explains our commercial relationships.\n\n## How we earn\nBiorals may earn a commission when you click a link and make a purchase. This never changes the price you pay.\n\n## What it does not affect\nCommission does not change which offers we list or how we test them. Editorial choices stay independent.\n\n## Our promise\nWe label sample and unverified offers clearly and remove offers that stop working. Read our [editorial policy](/editorial-policy/) for more."
   }
  ],
  "collections": [

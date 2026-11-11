@@ -22,7 +22,7 @@ async function route(v) {
 setRouter(route);
 
 function loginView(msg = '') {
-  app.innerHTML = `<form class="login" id="login"><div class="lg">CouponBuz</div><h1>Admin sign in</h1><p>Authorised administrators only.</p>
+  app.innerHTML = `<form class="login" id="login"><div class="lg">Biorals</div><h1>Admin sign in</h1><p>Authorised administrators only.</p>
   <label>Email</label><input class="in" id="e" type="email" autocomplete="username" required>
   <label>Password</label><input class="in" id="p" type="password" autocomplete="current-password" required>
   <div class="err" id="err">${esc(msg)}</div><div style="margin-top:16px"><button class="btn" style="width:100%;justify-content:center">Sign in</button></div></form>`;

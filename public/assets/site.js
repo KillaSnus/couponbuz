@@ -194,8 +194,8 @@ async function syncLiveData(){
       var cb=document.querySelector('[data-offer-count]');
       if(cb)cb.textContent=d.coupons.length+' offer'+(d.coupons.length>1?'s':'');
     }
-    console.log('⚡ CouponBuz: Live content synced');
-  }catch(e){console.warn('CouponBuz sync:',e.message);}
+    console.log('⚡ Biorals: Live content synced');
+  }catch(e){console.warn('Biorals sync:',e.message);}
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncLiveData);}else{syncLiveData();}
 setInterval(syncLiveData,5000);})();

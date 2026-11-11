@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createSite, SEED } from '../src/site.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const site = createSite({ ...SEED, redirects: [] }, { siteUrl: 'https://couponbuz.test', showDemo: true });
+const site = createSite({ ...SEED, redirects: [] }, { siteUrl: 'https://biorals.test', showDemo: true });
 const pages = [...site.routes.keys()];
 const html = Object.fromEntries(pages.map((p) => [p, site.render(p).body]));
 const meta = (h, re) => (h.match(re) || [])[1] || '';
@@ -32,7 +32,7 @@ test('each page has one h1, a canonical URL on the site domain, and valid JSON-L
   for (const p of pages) {
     const h = html[p];
     assert.equal((h.match(/<h1[ >]/g) || []).length, 1, 'h1 count ' + p);
-    assert.match(h, new RegExp(`<link rel="canonical" href="https://couponbuz\\.test${p === '/' ? '/' : p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}">`), 'canonical ' + p);
+    assert.match(h, new RegExp(`<link rel="canonical" href="https://biorals\\.test${p === '/' ? '/' : p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}">`), 'canonical ' + p);
     for (const m of h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(m[1]);
   }
 });
@@ -51,20 +51,20 @@ test('internal links all resolve (page, generated file, logo, or static file)', 
 
 test('sitemap lists exactly the indexable pages', () => {
   const xml = site.render('/sitemap-main.xml').body;
-  const inMap = new Set([...xml.matchAll(/<loc>https:\/\/couponbuz\.test([^<]*)<\/loc>/g)].map((m) => m[1]));
-  const indexable = new Set(pages.filter((p) => !/noindex/.test(meta(html[p], /<meta name="robots" content="([^"]*)"/)) && meta(html[p], /<link rel="canonical" href="([^"]*)"/) === 'https://couponbuz.test' + p));
+  const inMap = new Set([...xml.matchAll(/<loc>https:\/\/biorals\.test([^<]*)<\/loc>/g)].map((m) => m[1]));
+  const indexable = new Set(pages.filter((p) => !/noindex/.test(meta(html[p], /<meta name="robots" content="([^"]*)"/)) && meta(html[p], /<link rel="canonical" href="([^"]*)"/) === 'https://biorals.test' + p));
   assert.deepEqual([...inMap].sort(), [...indexable].sort());
   assert.match(site.render('/sitemap.xml').body, /sitemap-main\.xml/);
 });
 
 test('robots.txt blocks the admin and points to the sitemap', () => {
   const r = site.render('/robots.txt').body;
-  assert.match(r, /Disallow: \/admin\//); assert.match(r, /Sitemap: https:\/\/couponbuz\.test\/sitemap\.xml/);
+  assert.match(r, /Disallow: \/admin\//); assert.match(r, /Sitemap: https:\/\/biorals\.test\/sitemap\.xml/);
 });
 
 test('sample offers are clearly labelled and hidden when SHOW_DEMO=false', () => {
   assert.match(html['/coupons/nike/'], /Sample/i);
-  const live = createSite({ ...SEED, redirects: [] }, { siteUrl: 'https://couponbuz.test', showDemo: false });
+  const live = createSite({ ...SEED, redirects: [] }, { siteUrl: 'https://biorals.test', showDemo: false });
   assert.doesNotMatch(live.render('/coupons/nike/').body, /Sample: /);
 });
 
@@ -78,7 +78,7 @@ test('forms and widgets point at the Cloudflare endpoints (no Netlify leftovers)
 
 test('search index and bot knowledge are generated', () => {
   const s = JSON.parse(site.render('/search.json').body); assert.ok(s.length >= 20 && s[0].n && s[0].u);
-  const k = site.botKnowledge(); assert.ok(k.stores.length >= 20 && k.site.url === 'https://couponbuz.test');
+  const k = site.botKnowledge(); assert.ok(k.stores.length >= 20 && k.site.url === 'https://biorals.test');
 });
 
 test('generated store logos are served for stores without an uploaded logo', () => {
@@ -91,7 +91,7 @@ test('rendering one page is fast even with ~600 stores and ~900 offers', () => {
   const coupons = Array.from({ length: 900 }, (_, i) => ({ id: 'c' + i, storeSlug: 's' + (i % 600), title: 'Offer ' + i, type: 'code', code: 'CODE' + i, discount: '10% off', description: 'Desc', status: 'published', markets: ['US'], verified: true, verifiedAt: '2026-10-30', terms: 'Terms', tags: [] }));
   const data = { ...SEED, stores, coupons, redirects: [] };
   const t0 = performance.now();
-  const big = createSite(data, { siteUrl: 'https://couponbuz.test' });
+  const big = createSite(data, { siteUrl: 'https://biorals.test' });
   const tCreate = performance.now() - t0;
   const t1 = performance.now(); big.render('/coupons/s42/'); const tStore = performance.now() - t1;
   const t2 = performance.now(); big.render('/'); const tHome = performance.now() - t2;

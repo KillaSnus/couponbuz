@@ -13,8 +13,8 @@ const wr = (args) => execFileSync('npx', ['wrangler', ...args], { cwd: root, enc
 if (!toml.includes('REPLACE_WITH_KV_ID')) {
   console.log('✓ wrangler.toml already has a KV id. Nothing to create.');
 } else {
-  console.log('Creating KV namespace "couponbuz-cms"…');
-  const out = wr(['kv', 'namespace', 'create', 'couponbuz-cms']);
+  console.log('Creating KV namespace "biorals-cms"…');
+  const out = wr(['kv', 'namespace', 'create', 'biorals-cms']);
   console.log(out);
   const id = (out.match(/"?id"?\s*[:=]\s*"([0-9a-f]{32})"/i) || out.match(/\b([0-9a-f]{32})\b/) || [])[1];
   if (!id) { console.error('Could not read the namespace id from the output above. Copy it into wrangler.toml (id = "...") by hand.'); process.exit(1); }
@@ -24,8 +24,8 @@ if (!toml.includes('REPLACE_WITH_KV_ID')) {
 }
 console.log(`
 Next steps:
-  1. npx wrangler pages project create couponbuz --production-branch main     (first time only)
-  2. npx wrangler pages secret put ADMIN_PASSWORD --project-name couponbuz    (type a long password)
+  1. npx wrangler pages project create biorals --production-branch main     (first time only)
+  2. npx wrangler pages secret put ADMIN_PASSWORD --project-name biorals    (type a long password)
   3. npm run deploy
   4. Open https://<your-site>/admin/ and sign in, then Dashboard > Import starter data.
 `);

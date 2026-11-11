@@ -7,8 +7,8 @@ You need: a free Cloudflare account, Node.js 20+, and this folder.
 npm install
 npx wrangler login                 # opens the browser to authorise
 npm run setup                      # creates the KV storage and saves its id in wrangler.toml
-npx wrangler pages project create couponbuz --production-branch main
-npx wrangler pages secret put ADMIN_PASSWORD --project-name couponbuz     # type a long password
+npx wrangler pages project create biorals --production-branch main
+npx wrangler pages secret put ADMIN_PASSWORD --project-name biorals     # type a long password
 npm run deploy
 ```
 Optional secrets (same command): `ADMIN_EMAIL` (only this email may sign in), `SESSION_SECRET` (long random text), `ANTHROPIC_API_KEY` (AI answers in the chat bubble).
@@ -20,8 +20,8 @@ Go to `https://<your-project>.pages.dev/admin/`, sign in, then **Dashboard > Imp
 
 Add your 535 stores through **Import / Export** (CSV). Check the result on /stores/ afterwards.
 
-## 3. Use your own domain (couponbuz.pro)
-Cloudflare dashboard > Workers & Pages > couponbuz > Custom domains > add `couponbuz.pro`. If the domain is currently attached to your OLD Pages project, remove it there first, then add it here.
+## 3. Use your own domain (biorals.com)
+Cloudflare dashboard > Workers & Pages > biorals > Custom domains > add `biorals.com`. If the domain is currently attached to your OLD Pages project, remove it there first, then add it here.
 
 ## Deploying from GitHub instead of the CLI
 Push this folder to GitHub, then Workers & Pages > Create > Pages > Connect to Git. Build command: leave empty. Build output directory: `public`. The KV id must already be in `wrangler.toml` (run `npm run setup` once locally and commit the file). Add `ADMIN_PASSWORD` under Settings > Variables and Secrets.

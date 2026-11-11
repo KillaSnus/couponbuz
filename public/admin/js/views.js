@@ -22,7 +22,7 @@ const NAV = [
 let current = 'dashboard';
 export function shell(view, inner) {
   current = view;
-  $app().innerHTML = `<div class="shell"><aside class="side"><div class="logo">CouponBuz <small>CMS</small></div>
+  $app().innerHTML = `<div class="shell"><aside class="side"><div class="logo">Biorals <small>CMS</small></div>
   ${NAV.map(([g, items]) => `${g ? `<h4>${g}</h4>` : ''}${items.map(([id, ic, l]) => `<a data-v="${id}" class="${view === id ? 'on' : ''}"><span>${ic}</span>${esc(l)}</a>`).join('')}`).join('')}
   <div class="out"><small>${esc(currentUser?.email || '')}${DEMO ? ' · demo mode' : ''}</small><a data-out>Sign out</a><a data-live>View live site ↗</a></div></aside>
   <main class="main">${DEMO ? '<div class="demo">Demo mode: changes are kept in memory only and reset when you reload. Open the deployed /admin/ to save for real.</div>' : ''}${inner}</main></div>`;
@@ -146,7 +146,7 @@ async function bulkRedirects() {
 
 // ---------- edit ----------
 function serpHTML(S, data, settings) {
-  const site = settings.site?.siteName || 'CouponBuz', url = (settings.site?.url || 'https://example.com').replace(/\/$/, '');
+  const site = settings.site?.siteName || 'Biorals', url = (settings.site?.url || 'https://example.com').replace(/\/$/, '');
   const kw = String(data[S.seo.kw] || '').trim(), slug = slugify(data.slug || kw);
   const tpl = settings.seo?.titleTemplate || '%title% | %site%';
   const autoTitle = S.seo.prefix === '/coupons/' ? `${kw} Promo Codes & Savings Tips` : S.seo.prefix === '/categories/' ? `${kw} Coupons & Promo Codes` : kw;
@@ -205,7 +205,7 @@ export async function editView(col, item) {
 // ---------- settings ----------
 const PV = (t) => `<div class="pv" style="--p:${t.primary};--pd:${t.primaryDark};--a:${t.accent};--bg:${t.bg};--s:${t.surface};--ink:${t.ink};--mu:${t.muted};--r:${Math.min(28, Number(t.radius) || 14)}px">
   <div class="pv-an" style="background:${t.announcement?.bg || '#101828'}">${esc(t.announcement?.enabled ? t.announcement.text || 'Announcement' : 'Announcement bar hidden')}</div>
-  <div class="pv-h"><b>● CouponBuz</b><span>Stores</span><span>Categories</span><span>Guides</span></div>
+  <div class="pv-h"><b>● Biorals</b><span>Stores</span><span>Categories</span><span>Guides</span></div>
   <div class="pv-hero"><i>Updated October 2026</i><h4>Find promo codes worth using</h4><div class="pv-s"><span>Search a store…</span><u>Search</u></div></div>
   <div class="pv-body"><div class="pv-offer"><div class="pv-d">20% off</div><div class="pv-t"><b>Sample offer title</b><small>Checked 12 Oct · US UK</small></div><div class="pv-c">Show code</div></div><div class="pv-tiles"><div>N</div><div>A</div><div>E</div></div></div></div>`;
 
@@ -286,7 +286,7 @@ export async function importExportView() {
   $('#bk').onclick = async () => {
     const out = { exportedAt: new Date().toISOString() };
     for (const c of [...Object.keys(COLLECTIONS), 'settings', 'media']) out[c] = await list(c, true);
-    download(`couponbuz-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(out, null, 1), 'application/json'); toast('Backup downloaded');
+    download(`biorals-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(out, null, 1), 'application/json'); toast('Backup downloaded');
   };
   $('#rs').onclick = () => $('#rsf').click();
   $('#rsf').onchange = async (e) => {

@@ -100,7 +100,7 @@ export const SETTINGS = {
   site: { label: 'General', icon: '⚙️', fields: [
     { k: 'siteName', l: 'Site name', t: 'text', g: 'Basics' },
     { k: 'tagline', l: 'Tagline', t: 'text', g: 'Basics' },
-    { k: 'url', l: 'Live site URL (no trailing slash)', t: 'text', ph: 'https://couponbuz.com', g: 'Basics' },
+    { k: 'url', l: 'Live site URL (no trailing slash)', t: 'text', ph: 'https://biorals.com', g: 'Basics' },
     { k: 'email', l: 'Contact email', t: 'text', g: 'Basics' },
     { k: 'footerAbout', l: 'Footer blurb', t: 'textarea', rows: 2, g: 'Footer' },
     { k: 'disclosure', l: 'Affiliate disclosure (footer + store pages)', t: 'textarea', rows: 3, g: 'Footer' },

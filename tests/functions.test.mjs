@@ -29,7 +29,7 @@ test('GET /api/cms is a safe setup check; wrong methods are refused', async () =
 test('full admin flow through the real function: login -> save -> public page changes', async () => {
   resetRuntimeCache();
   const env = makeEnv();
-  const login = await (await cmsFn(ctx(post('/api/cms', { op: 'login', email: 'owner@couponbuz.test', password: PASSWORD }), env))).json();
+  const login = await (await cmsFn(ctx(post('/api/cms', { op: 'login', email: 'owner@biorals.test', password: PASSWORD }), env))).json();
   assert.ok(login.token);
   const auth = { authorization: 'Bearer ' + login.token };
   await cmsFn(ctx(post('/api/cms', { op: 'set', col: 'categories', id: 'pets', data: { slug: 'pets', name: 'Pets', icon: '🐾', description: 'Pet deals.', status: 'published' } }, auth), env));
@@ -42,7 +42,7 @@ test('full admin flow through the real function: login -> save -> public page ch
 
 test('uploaded images are served from /media with safe headers', async () => {
   const env = makeEnv();
-  const login = await (await cmsFn(ctx(post('/api/cms', { op: 'login', email: 'owner@couponbuz.test', password: PASSWORD }), env))).json();
+  const login = await (await cmsFn(ctx(post('/api/cms', { op: 'login', email: 'owner@biorals.test', password: PASSWORD }), env))).json();
   const up = await (await cmsFn(ctx(post('/api/cms', { op: 'upload', name: 'logo.png', dataUrl: 'data:image/png;base64,iVBORw0KGgo=' }, { authorization: 'Bearer ' + login.token }), env))).json();
   const r = await mediaFn(ctx(req(up.url), env, { params: { path: up.path.split('/') } }));
   assert.equal(r.status, 200); assert.equal(r.headers.get('content-type'), 'image/png'); assert.equal(r.headers.get('x-content-type-options'), 'nosniff');

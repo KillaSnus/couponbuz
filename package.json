@@ -1,13 +1,13 @@
 {
-  "name": "couponbuz",
+  "name": "biorals",
   "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "CouponBuz: coupon site + admin CMS on Cloudflare Pages (Functions + KV). CMS saves go live instantly.",
+  "description": "Biorals: coupon site + admin CMS on Cloudflare Pages (Functions + KV). CMS saves go live instantly.",
   "scripts": {
     "setup": "node scripts/setup.mjs",
     "dev": "wrangler pages dev public --kv=CMS --port 8788",
-    "deploy": "wrangler pages deploy public --project-name=couponbuz",
+    "deploy": "wrangler pages deploy public --project-name=biorals",
     "test": "node --test tests/*.test.mjs"
   },
   "engines": { "node": ">=20" },
