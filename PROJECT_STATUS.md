@@ -1,4 +1,4 @@
-# CouponBuz: Project Status
+# Biorals: Project Status
 Last updated: 2026-10-18. Everything below is about the code in this folder. "Verified" means a command was run in the build sandbox and passed; "Not verified" means it needs live Firebase / Netlify / search-engine access that the sandbox does not have.
 
 ## Stack

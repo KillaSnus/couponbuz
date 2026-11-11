@@ -1,4 +1,4 @@
-# CouponBuz (Cloudflare Pages edition)
+# Biorals (Cloudflare Pages edition)
 
 Coupon website + admin CMS, built for Cloudflare Pages. **When you save in the CMS, the public website shows the change immediately.** There is no build and no deploy hook.
 

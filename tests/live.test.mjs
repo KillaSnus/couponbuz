@@ -8,7 +8,7 @@ import { makeEnv, FakeCache, post, req } from './_fakes.mjs';
 async function setup() {
   resetRuntimeCache();
   const env = makeEnv(); const cache = new FakeCache();
-  const token = await issueToken(env, 'owner@couponbuz.test');
+  const token = await issueToken(env, 'owner@biorals.test');
   const cms = async (body) => { try { return await (await handleCmsPost(post('/api/cms', body, { authorization: 'Bearer ' + token }), env)).json(); } catch (e) { return await errorResponse(e).json(); } };
   const get = async (path, init) => { const r = await handlePublic(req(path, init), env, { cache, waitUntil: () => {} }); return { status: r.status, text: await r.text(), headers: r.headers, res: r }; };
   return { env, cache, cms, get };
@@ -92,7 +92,7 @@ test('editor content is escaped (no script injection from CMS fields)', async ()
 
 test('routing details: trailing slash, /admin, HEAD, methods, 404 page', async () => {
   const { get, env } = await setup();
-  const a = await get('/stores'); assert.equal(a.status, 301); assert.equal(a.headers.get('location'), 'https://couponbuz.test/stores/');
+  const a = await get('/stores'); assert.equal(a.status, 301); assert.equal(a.headers.get('location'), 'https://biorals.test/stores/');
   const b = await get('/admin'); assert.equal(b.status, 301); assert.match(b.headers.get('location'), /\/admin\/$/);
   const c = await get('/definitely-not-a-page/'); assert.equal(c.status, 404); assert.match(c.text, /Page not found/);
   const d = await handlePublic(req('/', { method: 'POST' }), env, {}); assert.equal(d.status, 405);
@@ -103,7 +103,7 @@ test('static files in /public take priority over generated routes', async () => 
   const { env } = await setup();
   env.ASSETS = { fetch: async (r) => (new URL(r.url).pathname === '/img/og-default.png' ? new Response('PNGDATA', { status: 200 }) : new Response('nf', { status: 404 })) };
   const r = await handlePublic(req('/img/og-default.png'), env, {}); assert.equal(await r.text(), 'PNGDATA');
-  const g = await handlePublic(req('/robots.txt'), env, {}); assert.match(await g.text(), /Sitemap: https:\/\/couponbuz\.test\/sitemap\.xml/);
+  const g = await handlePublic(req('/robots.txt'), env, {}); assert.match(await g.text(), /Sitemap: https:\/\/biorals\.test\/sitemap\.xml/);
 });
 
 test('without a KV binding the site still renders from the starter data', async () => {

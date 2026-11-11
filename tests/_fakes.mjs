@@ -12,10 +12,10 @@ export class FakeCache {
   async match(req) { const e = this.m.get(req.url); return e ? new Response(e.body, { status: e.status, headers: e.headers }) : undefined; }
   async put(req, res) { this.m.set(req.url, { body: await res.text(), status: res.status, headers: [...res.headers] }); }
 }
-export const ORIGIN = 'https://couponbuz.test';
+export const ORIGIN = 'https://biorals.test';
 export const PASSWORD = 'correct horse battery staple 42';
 export function makeEnv(extra = {}) {
-  return { CMS: new FakeKV(), ADMIN_PASSWORD: PASSWORD, ADMIN_EMAIL: 'owner@couponbuz.test', SITE_URL: ORIGIN, SHOW_DEMO: 'false', ...extra };
+  return { CMS: new FakeKV(), ADMIN_PASSWORD: PASSWORD, ADMIN_EMAIL: 'owner@biorals.test', SITE_URL: ORIGIN, SHOW_DEMO: 'false', ...extra };
 }
 export const req = (path, init = {}) => new Request(ORIGIN + path, init);
 export const post = (path, body, headers = {}) => new Request(ORIGIN + path, { method: 'POST', headers: { 'content-type': 'application/json', ...headers }, body: JSON.stringify(body) });

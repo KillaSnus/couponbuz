@@ -1,4 +1,4 @@
-// CouponBuz site renderer. Pure function of the CMS data: createSite(data, opts) returns an object whose
+// Biorals site renderer. Pure function of the CMS data: createSite(data, opts) returns an object whose
 // render(pathname) builds ONE page on demand (so a Cloudflare Pages Function can serve it straight from the CMS data,
 // no rebuild step needed). Only the requested page is rendered, which keeps CPU time low.
 import { md, esc, stripTags, truncate } from './lib/md.js';
@@ -63,7 +63,7 @@ configure(cfg, NOW);
 
 function hueOf(s) { let h = 0; for (const ch of s) h = (h * 31 + ch.charCodeAt(0)) % 360; return h; }
 const storeSvg = (name) => { const h = hueOf(name); const ini = name.replace(/[^A-Za-z0-9 ]/g, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('') || '?'; return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="${esc(name)} logo"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(${h} 72% 50%)"/><stop offset="1" stop-color="hsl(${(h + 40) % 360} 72% 38%)"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#g)"/><text x="32" y="41" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#fff">${esc(ini)}</text></svg>`; };
-const LOGO = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${esc(set.theme.primary)}"/><stop offset="1" stop-color="${esc(set.theme.primaryDark)}"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#a)"/><path d="M15 23h34a2 2 0 0 1 2 2v5a4 4 0 0 0 0 8v5a2 2 0 0 1-2 2H15a2 2 0 0 1-2-2v-5a4 4 0 0 0 0-8v-5a2 2 0 0 1 2-2z" fill="#fff"/><path d="M27 42l10-19" stroke="${esc(set.theme.accent)}" stroke-width="3.2" stroke-linecap="round"/><circle cx="27.5" cy="28" r="2.8" fill="${esc(set.theme.accent)}"/><circle cx="36.5" cy="38" r="2.8" fill="${esc(set.theme.accent)}"/></svg>`;
+const LOGO = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Biorals"><defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${esc(set.theme.primary)}"/><stop offset="1" stop-color="${esc(set.theme.primaryDark)}"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#a)"/><path d="M22 14h12c7 0 11 3.6 11 9 0 3.6-1.8 6.2-4.8 7.5C44.2 32 47 35 47 39.8 47 46 42.4 50 35 50H22z M29 20v8h4.5c2.8 0 4.3-1.5 4.3-4s-1.5-4-4.3-4zm0 14v9h5.5c3 0 4.8-1.700 4.8-4.5S37.5 34 34.5 34z" fill="#fff" fill-rule="evenodd"/><circle cx="48" cy="17" r="4" fill="${esc(set.theme.accent)}"/></svg>`;
 
 const siteUrl = set.site.url;
 const addPage = (p, html) => html; // route thunks return the html; the sitemap is built separately by sitemapEntries()
@@ -269,11 +269,11 @@ routes.set('/submit-coupon/', () => {
   <button class="btn accent" type="submit">Send for review</button>
   <p class="nl-msg" role="status" aria-live="polite" hidden></p>
 </form><p class="fine">We store your submission so we can review it. See the <a href="/privacy/">privacy policy</a>.</p></article>`;
-  return addPage(url, layout({ title: 'Submit a Coupon or Deal', description: 'Share a working promo code or deal with CouponBuz. Every submission is reviewed by a person before it is published.', path: url, body, noindex: true, schema: [crumbSchema(cr)] }), { index: false });
+  return addPage(url, layout({ title: 'Submit a Coupon or Deal', description: 'Share a working promo code or deal with Biorals. Every submission is reviewed by a person before it is published.', path: url, body, noindex: true, schema: [crumbSchema(cr)] }), { index: false });
 });
 
 // ----- Search + 404 -----
-routes.set('/search/', () => layout({ title: 'Search Stores', description: 'Search stores and promo codes on ' + set.site.siteName, path: '/search/', noindex: true,
+routes.set('/search/', () => layout({ title: 'Search Stores', description: 'Search stores and promo codes on ' + set.site.siteName + ' to find a working discount.', path: '/search/', noindex: true,
   body: `${breadcrumbs([['Home', '/'], ['Search', '/search/']])}${pageHead('Search results')}<section class="wrap block"><form class="hero-search dark" action="/search/" role="search"><input type="search" name="q" placeholder="Search stores" aria-label="Search stores" data-q><button class="btn accent" type="submit">Search</button></form><div class="tile-grid" data-results></div><p class="muted" data-empty hidden>No stores match your search. Try a shorter name or browse <a href="/categories/">categories</a>.</p></section>` }));
 notFound = () => layout({ title: 'Page not found', description: 'This page could not be found.', path: '/404.html', noindex: true, body: `<section class="wrap page narrow"><h1>Page not found</h1><p class="lead">The page you are looking for does not exist or has moved.</p><p><a class="btn accent" href="/">Back to home</a> <a class="btn ghost" href="/stores/">Browse stores</a></p></section>` });
 

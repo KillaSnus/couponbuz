@@ -7,12 +7,12 @@ async function call(env, body, token) {
   try { const r = await handleCmsPost(post('/api/cms', body, token ? { authorization: 'Bearer ' + token } : {}), env); return { status: r.status, body: await r.json() }; }
   catch (e) { const r = errorResponse(e); return { status: r.status, body: await r.json() }; }
 }
-const login = async (env) => (await call(env, { op: 'login', email: 'owner@couponbuz.test', password: PASSWORD })).body.token;
+const login = async (env) => (await call(env, { op: 'login', email: 'owner@biorals.test', password: PASSWORD })).body.token;
 
 test('login works with the right password and rejects the wrong one', async () => {
   const env = makeEnv();
   assert.ok(await login(env));
-  const bad = await call(env, { op: 'login', email: 'owner@couponbuz.test', password: 'nope' });
+  const bad = await call(env, { op: 'login', email: 'owner@biorals.test', password: 'nope' });
   assert.equal(bad.status, 401);
   const wrongMail = await call(env, { op: 'login', email: 'someone@else.test', password: PASSWORD });
   assert.equal(wrongMail.status, 401);
@@ -35,8 +35,8 @@ test('missing KV binding is explained', async () => {
 
 test('login is throttled after repeated failures', async () => {
   const env = makeEnv();
-  for (let i = 0; i < 8; i++) await call(env, { op: 'login', email: 'owner@couponbuz.test', password: 'bad' + i });
-  const r = await call(env, { op: 'login', email: 'owner@couponbuz.test', password: PASSWORD });
+  for (let i = 0; i < 8; i++) await call(env, { op: 'login', email: 'owner@biorals.test', password: 'bad' + i });
+  const r = await call(env, { op: 'login', email: 'owner@biorals.test', password: PASSWORD });
   assert.equal(r.status, 429);
 });
 

@@ -47,7 +47,7 @@ test('two visitors submitting at once never overwrite each other', async () => {
 test('newsletter + contact forms store messages; bad email / honeypot handled', async () => {
   const env = makeEnv();
   const fd = new FormData(); fd.set('form-name', 'newsletter'); fd.set('email', 'Fan@Example.com'); fd.set('bot-field', '');
-  const r = await handleForm(new Request('https://couponbuz.test/api/form', { method: 'POST', body: fd }), env);
+  const r = await handleForm(new Request('https://biorals.test/api/form', { method: 'POST', body: fd }), env);
   assert.equal(r.status, 303); // plain form post (no JS) is redirected back
   const c = await run(handleForm, post('/api/form', { 'form-name': 'contact', email: 'x@y.co', name: 'Sam', message: 'Hello there, a question' }), env);
   assert.equal(c.status, 200);

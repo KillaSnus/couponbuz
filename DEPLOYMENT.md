@@ -7,10 +7,10 @@ Nothing has been deployed, pushed, or pointed at DNS by this work. All commands 
 ## GitHub
 This folder is NOT yet a git repository and has no remote. Create an empty repository on GitHub first, then:
 ```
-cd couponbuz
+cd biorals
 git init -b main                         # creates the local repo
 git add -A && git status                 # stage everything not ignored; READ the list: no .env, no service-account*.json, no dist/
-git commit -m "Initial CouponBuz site"   # saves the first snapshot locally
+git commit -m "Initial Biorals site"   # saves the first snapshot locally
 git remote add origin <YOUR-REPO-URL>    # links to the repo you created (I will not guess this URL)
 git push -u origin main                  # uploads. Run only when you are happy with the status list
 ```

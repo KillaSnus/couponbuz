@@ -93,7 +93,7 @@ test('a storage failure returns 502 with a friendly message (and no stack/detail
 });
 test('admin email is sent only when configured, as plain text, and its failure does not lose the submission', async () => {
   env(); let rec = mock(); let { handler } = await load(); await handler(ev()); assert.equal(rec.email.length, 0);
-  env({ RESEND_API_KEY: 'k', NOTIFY_EMAIL: 'admin@site.test', NOTIFY_FROM: 'CouponBuz <noreply@site.test>' }); rec = mock({ emailStatus: 500 }); ({ handler } = await load());
+  env({ RESEND_API_KEY: 'k', NOTIFY_EMAIL: 'admin@site.test', NOTIFY_FROM: 'Biorals <noreply@site.test>' }); rec = mock({ emailStatus: 500 }); ({ handler } = await load());
   const res = await handler(ev({ store: 'Boots' })); assert.equal(res.statusCode, 200); assert.equal(rec.firestore.length, 1);
   assert.equal(rec.email.length, 1); assert.deepEqual(rec.email[0].to, ['admin@site.test']); assert.match(rec.email[0].text, /Store: Boots/); assert.ok(!('html' in rec.email[0]));
 });

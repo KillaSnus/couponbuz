@@ -1,6 +1,6 @@
-# Cloudflare Pages project configuration for CouponBuz.
+# Cloudflare Pages project configuration for Biorals.
 # Run `npm run setup` once: it creates the KV storage and puts its id below.
-name = "couponbuz"
+name = "biorals"
 compatibility_date = "2026-10-01"
 pages_build_output_dir = "public"
 
@@ -11,12 +11,12 @@ id = "4973ac41469d4410a08cdbea990306b1"
 
 [vars]
 # Your real domain, no trailing slash. Used for canonical URLs and the sitemap.
-SITE_URL = "https://couponbuz.pro"
+SITE_URL = "https://biorals.com"
 # "true" shows the clearly-labelled sample offers when the CMS is empty. Set to "false" once you add real offers.
 SHOW_DEMO = "false"
 
 # SECRETS (never put these in this file). Set them with:
-#   npx wrangler pages secret put ADMIN_PASSWORD --project-name couponbuz
+#   npx wrangler pages secret put ADMIN_PASSWORD --project-name biorals
 #   ADMIN_EMAIL        optional: only this email can sign in
 #   SESSION_SECRET     optional: long random text used to sign login tokens
 #   ANTHROPIC_API_KEY  optional: turns on the AI answers in the chat bubble

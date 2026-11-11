@@ -1,4 +1,4 @@
-// CouponBuz CMS backend (Cloudflare KV). Used by the Pages Functions in /functions.
+// Biorals CMS backend (Cloudflare KV). Used by the Pages Functions in /functions.
 //
 // Storage layout in the KV namespace bound as `CMS`:
 //   col:<name>            one JSON object { "<id>": {...doc} } per collection (stores, coupons, settings, ...)
