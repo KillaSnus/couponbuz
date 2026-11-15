@@ -1,3 +1,6 @@
+/
+  Link: </assets/home.css>; rel=stylesheet
+
 /admin/*
   X-Frame-Options: DENY
   X-Robots-Tag: noindex, nofollow
