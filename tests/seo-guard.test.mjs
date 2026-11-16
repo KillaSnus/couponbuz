@@ -70,3 +70,11 @@ test('cleanDescription trims an ellipsis back to a whole sentence', () => {
   assert.equal(cleanDescription(d), 'Save with coupon codes for top stores today.');
   assert.equal(cleanDescription('Already fine.'), 'Already fine.');
 });
+
+test('softenClaims removes unproven "verified" wording and fixes "1 stores"', async () => {
+  const { softenClaims } = await import('../src/seo-guard.js');
+  const out = softenClaims('Verified Promo Codes & Coupons for 1,500+ Stores. Find verified Sephora promo codes. Home 1 stores, Auto 12 stores.');
+  assert.ok(!/verified/i.test(out), out);
+  assert.match(out, /1 store\b/);
+  assert.match(out, /12 stores/);
+});

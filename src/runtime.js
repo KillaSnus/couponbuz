@@ -5,6 +5,8 @@ import { createSite, SEED } from './site.js';
 import { loadContent, getVersion } from './cms.js';
 import { sanitizeData, guardSite } from './seo-guard.js';
 
+// Bump when the HTML output changes without a CMS save, so cached pages from the older code are not served.
+const CODE_REV = '2';
 const memo = { key: '', promise: null };
 
 const today = () => new Date().toISOString().slice(0, 10);
@@ -15,7 +17,7 @@ async function getSite(env) {
   let data = null;
   if (env.CMS) {
     ver = await getVersion(env);
-    const key = `${ver}|${today()}|${env.SITE_URL || ''}|${env.SHOW_DEMO || ''}|${env.HIDDEN_STORE_SLUGS || ''}|${env.MIN_DISTINCT_OFFERS || ''}|${env.VERIFIED_CLAIMS || ''}`;
+    const key = `${CODE_REV}|${ver}|${today()}|${env.SITE_URL || ''}|${env.SHOW_DEMO || ''}|${env.HIDDEN_STORE_SLUGS || ''}|${env.MIN_DISTINCT_OFFERS || ''}|${env.VERIFIED_CLAIMS || ''}`;
     if (memo.key === key && memo.promise) return { site: await memo.promise, ver };
     memo.key = key;
     memo.promise = (async () => {
@@ -55,7 +57,7 @@ export async function handlePublic(request, env, { waitUntil = () => {}, cache =
   }
 
   const { site, ver } = await getSite(env);
-  const cacheKey = new Request(`${url.origin}${pathname}?__v=${encodeURIComponent(ver)}&__d=${today()}`);
+  const cacheKey = new Request(`${url.origin}${pathname}?__v=${encodeURIComponent(CODE_REV + '-' + ver)}&__d=${today()}`);
   if (cache && request.method === 'GET') {
     const hit = await cache.match(cacheKey);
     if (hit) return new Response(hit.body, { status: hit.status, headers: withHeaders(hit.headers, { 'x-cache': 'HIT' }) });

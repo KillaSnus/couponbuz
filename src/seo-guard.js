@@ -60,6 +60,12 @@ const CLAIM_RULES = [
     'Each offer shows the date it was last checked. Retailers can end or change offers at any time, so a code may not work for every order.'],
   [/tested and confirmed working today/gi, 'with the date each one was last checked'],
   [/tested and working for/gi, 'listed for'],
+  // "Verified" with nothing behind it: say what is true instead. Per-offer "Checked <date>" pills are untouched.
+  [/Verified (Promo Codes|Coupons|Discount Codes)/g, '$1'],
+  [/\b(find|browse|get) verified (\w+ )?(promo codes|coupon codes|coupons|discount codes)/gi, (m, a, b = '', c) => `${a} ${b}${c}`],
+  [/with verified (\w+ )?(promo codes|coupon codes|coupons)/gi, (m, a = '', c) => `with ${a}${c}`],
+  [/with our tested offers/gi, 'with the offers we list'],
+  [/(\d+) stores\b/g, (m, n) => (n === '1' ? '1 store' : m)],
 ];
 export const softenClaims = (html) => CLAIM_RULES.reduce((h, [re, to]) => h.replace(re, to), html);
 
