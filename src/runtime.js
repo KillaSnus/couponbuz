@@ -3,6 +3,7 @@
 // visitor request renders the new content. Rendering one page is cheap (only that page is built).
 import { createSite, SEED } from './site.js';
 import { loadContent, getVersion } from './cms.js';
+import { sanitizeData, guardSite } from './seo-guard.js';
 
 const memo = { key: '', promise: null };
 
@@ -14,18 +15,20 @@ async function getSite(env) {
   let data = null;
   if (env.CMS) {
     ver = await getVersion(env);
-    const key = `${ver}|${today()}|${env.SITE_URL || ''}|${env.SHOW_DEMO || ''}`;
+    const key = `${ver}|${today()}|${env.SITE_URL || ''}|${env.SHOW_DEMO || ''}|${env.HIDDEN_STORE_SLUGS || ''}|${env.MIN_DISTINCT_OFFERS || ''}|${env.VERIFIED_CLAIMS || ''}`;
     if (memo.key === key && memo.promise) return { site: await memo.promise, ver };
     memo.key = key;
     memo.promise = (async () => {
       const content = await loadContent(env);
       data = empty(content) ? { ...SEED, settings: content.settings || {}, redirects: content.redirects || [] } : content;
-      return createSite(data, { siteUrl: env.SITE_URL, showDemo: env.SHOW_DEMO !== 'false' });
+      // SEO and trust guards: dedupe offers, hide junk stores, noindex thin pages (see src/seo-guard.js)
+      data = sanitizeData(data, env);
+      return guardSite(createSite(data, { siteUrl: env.SITE_URL, showDemo: env.SHOW_DEMO !== 'false' }), env);
     })();
     try { return { site: await memo.promise, ver }; } catch (e) { memo.key = ''; memo.promise = null; throw e; }
   }
   // KV not connected yet: still show the starter site so the first deploy is never blank
-  if (memo.key !== 'seed') { memo.key = 'seed'; memo.promise = Promise.resolve(createSite({ ...SEED, redirects: [] }, { siteUrl: env.SITE_URL, showDemo: env.SHOW_DEMO !== 'false' })); }
+  if (memo.key !== 'seed') { memo.key = 'seed'; memo.promise = Promise.resolve(guardSite(createSite(sanitizeData({ ...SEED, redirects: [] }, env), { siteUrl: env.SITE_URL, showDemo: env.SHOW_DEMO !== 'false' }), env)); }
   return { site: await memo.promise, ver };
 }
 
