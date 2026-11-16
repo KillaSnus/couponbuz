@@ -70,3 +70,24 @@ test('cleanDescription trims an ellipsis back to a whole sentence', () => {
   assert.equal(cleanDescription(d), 'Save with coupon codes for top stores today.');
   assert.equal(cleanDescription('Already fine.'), 'Already fine.');
 });
+
+test('softenClaims removes unproven "verified" wording and fixes "1 stores"', async () => {
+  const { softenClaims } = await import('../src/seo-guard.js');
+  const out = softenClaims('Verified Promo Codes & Coupons for 1,500+ Stores. Find verified Sephora promo codes. Home 1 stores, Auto 12 stores.');
+  assert.ok(!/verified/i.test(out), out);
+  assert.match(out, /1 store\b/);
+  assert.match(out, /12 stores/);
+});
+
+test('storeSummaryHtml uses only the store\'s own offer data', async () => {
+  const { storeSummaryHtml } = await import('../src/seo-guard.js');
+  const html = storeSummaryHtml({ name: 'Acme' }, [
+    { type: 'code', code: 'A1', discount: '10%', markets: ['us'], minSpend: '$50', expires: '2026-12-01' },
+    { type: 'deal', discount: '30% off', markets: ['us'] },
+  ]);
+  assert.match(html, /2 offers listed: 1 with a code and 1 deal that needs no code/);
+  assert.match(html, /10% to 30%/);
+  assert.match(html, /1 Dec 2026/);
+  assert.match(html, /minimum spend/);
+  assert.equal(storeSummaryHtml({ name: 'Acme' }, []), '');
+});
